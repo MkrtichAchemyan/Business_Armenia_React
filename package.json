@@ -10,7 +10,6 @@
     "react-router": "^5.0.0",
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",
-    "swipe-js-iso": "^2.1.5",
     "swiper": "^4.3.5"
   },
   "scripts": {

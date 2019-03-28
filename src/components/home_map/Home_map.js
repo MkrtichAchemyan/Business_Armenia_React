@@ -1,7 +1,7 @@
 import React, { Component} from 'react'
 
 
-class Home_map extends Component{
+class HomeMap extends Component{
   render(){
 
     return(
@@ -19,4 +19,4 @@ class Home_map extends Component{
   }
 }
 
-export default Home_map
+export default HomeMap

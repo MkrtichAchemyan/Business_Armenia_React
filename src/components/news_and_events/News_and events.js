@@ -2,7 +2,7 @@ import React, { Component} from 'react'
 
 
 
-class News_and_events extends Component{
+class NewsAndEvents extends Component{
   render(){
     const {news} = this.props
     const {events} = this.props
@@ -90,4 +90,4 @@ class News_and_events extends Component{
   }
 }
 
-export default News_and_events
+export default NewsAndEvents

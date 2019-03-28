@@ -18,8 +18,8 @@ import slide_2 from "../../assets/images/business-support-club.jpg";
 import slide_3 from "../../assets/images/slider-1.jpg";
 import Slider from "../slider/Slider";
 import IndexNumbers from "../index_numbers/Index_numbers";
-import News_and_events from "../news_and_events/News_and events";
-import Home_map from "../home_map/Home_map";
+import NewsAndEvents from "../news_and_events/News_and events";
+import HomeMap from "../home_map/Home_map";
 import Partners from "../partners/Partners";
 
 class Home extends Component{
@@ -164,11 +164,11 @@ class Home extends Component{
                 <IndexNumbers
                   index_numbers={index_numbers}
                 />
-                <News_and_events
+                <NewsAndEvents
                   news={news}
                   events={events}
                 />
-                <Home_map/>
+                <HomeMap/>
                 <Partners
                   partners={partners}
                 />

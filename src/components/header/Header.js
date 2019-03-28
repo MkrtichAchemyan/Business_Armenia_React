@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
-import { Router, Link } from "react-router-dom";
 import logo from '../../assets/images/logo.png'
-
-const history = require("history").createBrowserHistory()
 
 class Header extends Component{
 
@@ -33,12 +30,6 @@ class Header extends Component{
                   {item.text}
                   <span className="caret"></span>
                   </a>
-                {/*<Link to='/about' href="#" className="dropdown-toggle disabled" href="#" data-toggle="dropdown" style={{ textDecoration: 'none' }}>*/}
-
-                    {/*{item.text}*/}
-
-
-                {/*</Link>*/}
               <ul id="w6" className="dropdown-menu">
                 {item.list.map((item)=>{
                     return(
