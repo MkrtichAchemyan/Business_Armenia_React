@@ -3,7 +3,6 @@
 
 # dependencies
 /.idea
-/.idea/vcs.xml
 /node_modules
 /.pnp
 .pnp.js
