@@ -5,7 +5,9 @@ class About extends Component{
   render(){
     return(
       <>
-        <h1>About</h1>
+        <div className={'container'} style={{textAlign:'center'}}>
+         <h1>About</h1>
+        </div>
       </>
     )
   }

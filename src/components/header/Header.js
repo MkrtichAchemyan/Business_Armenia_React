@@ -26,7 +26,7 @@ class Header extends Component{
         return(
           index===0?
             <li key={item.id} className='dropdown'>
-                <a onClick={()=>{this.changeUrl('/about')}} className="dropdown-toggle disabled" href="#" data-toggle="dropdown">
+                <a onClick={()=>{this.changeUrl('/about')}} className="dropdown-toggle disabled" data-toggle="dropdown">
                   {item.text}
                   <span className="caret"></span>
                   </a>
