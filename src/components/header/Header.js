@@ -2,6 +2,67 @@ import React, { Component } from 'react'
 import logo from '../../assets/images/logo.png'
 
 class Header extends Component{
+  state = {
+    navItems: [
+      {
+        id: 1,
+        text: 'Մեր մասին',
+        link:'/about',
+        list: [
+          {
+            id: 1.1,
+            text: 'Ո՞վ ենք մենք',
+            link:'/about',
+          },
+          {
+            id: 1.4,
+            text: 'Հոգաբարձուների խորհուրդ',
+            link:'/board',
+          },
+          {
+            id: 1.2,
+            text: 'Մեր թիմը',
+            link:'/team',
+          },
+          {
+            id: 1.3,
+            text: 'Հայաստանի մասին',
+            link:'/about-armenia',
+          },
+          {
+            id: 1.5,
+            text: 'Կորպորատիվ կառավարում',
+            link:'/corporate',
+          }
+        ]
+      },
+      {
+        id: 2,
+        text: 'Մենք աշխարհում',
+        link:'/footprint',
+      },
+      {
+        id: 3,
+        text: 'Գործարարների աջակցության ակումբ',
+        link:'/business-support-club',
+      },
+      {
+        id: 4,
+        text: 'Միջոցառումներ',
+        link:'/events',
+      },
+      {
+        id: 5,
+        text: 'Նորություններ',
+        link:'/news',
+      },
+      {
+        id: 6,
+        text: 'Գործընկերներ',
+        link:'/partners',
+      },
+    ],
+  }
 
   changeUrl = (url)=>{
     this.props.history.push(url)
@@ -21,7 +82,7 @@ class Header extends Component{
   }
 
     render(){
-      const {navItems} = this.props
+      const {navItems} = this.state
       const navLi = navItems.map((item,index) =>{
         return(
           index===0?
@@ -34,7 +95,7 @@ class Header extends Component{
                 {item.list.map((item)=>{
                     return(
                       <li key={item.id}>
-                          <a onClick={()=>{this.changeUrl('/about')}}>
+                          <a onClick={()=>{this.changeUrl(item.link)}}>
                            {item.text}
                           </a>
                       </li>
