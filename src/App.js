@@ -13,6 +13,12 @@ import AboutArmenia from "./components/about_armenia/About_armenia";
 import Corporate from "./components/corporate/Corporate";
 import Footprint from "./components/footprint/Footprint";
 import FootprintItem from "./components/footprint_item/Footprint_item";
+import BusinessSupportClub from "./components/business_support_club/Business_support_club";
+import Events from "./components/events/Events";
+import Event from "./components/event/Event";
+import Partners from "./components/partners/Partners";
+import News from "./components/news/News";
+import NewsDetails from "./components/news_details/News_details";
 
 const history = require("history").createBrowserHistory()
 class App extends Component {
@@ -37,6 +43,12 @@ class App extends Component {
               <Route exact path='/corporate' component={Corporate}></Route>
               <Route exact path='/footprint' component={Footprint}></Route>
               <Route exact path='/footprint/:id' component={FootprintItem}></Route>
+              <Route exact path='/business-support-club' component={BusinessSupportClub}></Route>
+              <Route exact path='/events' component={Events}></Route>
+              <Route exact path='/events/:id' component={Event}></Route>
+              <Route exact path='/partners' component={Partners}></Route>
+              <Route exact path='/news' component={News}></Route>
+              <Route exact path='/news/:id' component={NewsDetails}></Route>
               <Route exact path='*' component={Home}><Redirect to="/"/></Route>
             </Switch>
 

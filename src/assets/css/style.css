@@ -932,7 +932,7 @@ a.team-all-text-link
     line-height: 53px;
     /* padding: 20px 25px; */
     padding: 20px 17px;
-    border: 1px solid #ee7b7b;
+    border: 1px solid #011f04;
     border-radius: 7px;
     /* width: 200px; */
     min-width: 150px;
@@ -1453,7 +1453,7 @@ a.team-all-text-link
 .footprint-button{
     font-size: 20px;
     color: #ffffff;
-    background: #011f04;
+    background-color: #011f04;
     text-transform: uppercase;
     padding-bottom: 5px;
     display: inline-block;
@@ -1465,7 +1465,7 @@ a.team-all-text-link
 .footprint-button:hover{
     color: #ffffff;
     text-decoration: none;
-    background-color: #c63c3c;
+    background-color: #014e05;
     outline: none;
 }
 .footprint-button:focus{

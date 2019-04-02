@@ -20,7 +20,7 @@ import Slider from "../slider/Slider";
 import IndexNumbers from "../index_numbers/Index_numbers";
 import NewsAndEvents from "../news_and_events/News_and events";
 import HomeMap from "../home_map/Home_map";
-import Partners from "../partners/Partners";
+import HomePartners from "../home_partners/Home_partners";
 
 class Home extends Component{
   state = {
@@ -168,8 +168,8 @@ class Home extends Component{
                   news={news}
                   events={events}
                 />
-                <HomeMap/>
-                <Partners
+                <HomeMap history={this.props.history}/>
+                <HomePartners
                   partners={partners}
                 />
               </>

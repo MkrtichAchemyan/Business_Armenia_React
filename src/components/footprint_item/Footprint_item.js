@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import russiaMap from '../../assets/images/russiaLow.svg'
 import emirats from '../../assets/images/unitedArabEmiratesLow.svg'
+import usa from '../../assets/images/usaLow.svg'
 import aharon_papoyan from '../../assets/images/aharon-papoyan.jpg'
 import petros_karapetyan from '../../assets/images/petros-karapetyan.jpg'
+import paruyr_sarkisyan from '../../assets/images/paruyr-sarkisyan.jpg'
 
 
 class FootprintItem extends Component{
@@ -28,6 +30,16 @@ class FootprintItem extends Component{
         email:'petros.karapetyan@businessarmenia.am',
         text:"Պետրոս Կարապետյանը «Zilli» ՍՊԸ-ի հիմնադիրն է, Հայաստանում ԱՄՆ դեսպանատան և Ֆիլիպինների պատվավոր հյուպատոսության նախկին աշխատակիցը։Պետրոս Կարապետյանը ներկայումս հանդիսանում է \"AM-SPT FZ\" ընկերության գլխավոր մենեջերը: Նախկինում աշխատել է Հայաստանում ԱՄՆ դեսպանատանը և Ֆիլիպինների պատվավոր հյուպատոսությունում:"
       },
+      {
+        id:3,
+        fullName:"Պարույր Սարկիսյան",
+        country:"ԱՄՆ, Չիկագո",
+        img:paruyr_sarkisyan,
+        flag: 'https://lipis.github.io/flag-icon-css/flags/4x3/um.svg',
+        map:usa,
+        email:'paruir.sarkisian@businessarmenia.am',
+        text:"Պարույր Սարկիսյանը Հայաստանում, Ռուսաստանում և Բուլղարիայում բիզնես հաղորդակցության ոլորտում երկար տարիների փորձ ունի։ Նա նաև Երևան-Չիկագո քույր քաղաքների նախաձեռնող խմբի համանախագահն է։Պարույր Սարկիսյանն ունի երկար տարիների աշխատանքային փորձ Հայաստանում, Ռուսաստանում և Բուլղարիայում բիզնես հաղորդակցության ոլորտում։ Նա նաև Երևան-Չիկագո քույր քաղաքների նախաձեռնող խմբի համանախագահն է։"
+      }
     ]
   }
 

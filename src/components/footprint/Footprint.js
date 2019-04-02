@@ -26,6 +26,15 @@ class Footprint extends Component{
         name: "Պետրոս Կարապետյան",
         flag:'https://lipis.github.io/flag-icon-css/flags/4x3/ae.svg',
         country:'ԱՄԷ '
+      },
+      {
+        id:3,
+        top:"159.375px",
+        left:"105.688px",
+        link:'/footprint/',
+        name: "Պարույր Սարկիսյան",
+        flag:'https://lipis.github.io/flag-icon-css/flags/4x3/um.svg',
+        country:'ԱՄՆ, Չիկագո'
       }
     ]
   }
