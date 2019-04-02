@@ -1,8 +1,4 @@
 import React, { Component } from 'react'
-
-import 'jquery/src/jquery'
-import 'bootstrap/dist/js/bootstrap'
-
 import map from '../../assets/images/map-footprint.png'
 
 

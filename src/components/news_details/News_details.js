@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import 'jquery/src/jquery'
-import 'bootstrap/dist/js/bootstrap'
 import news_1 from "../../assets/images/img6624.jpg";
 import news_2 from "../../assets/images/aram.jpg";
 import news_3 from "../../assets/images/chicago.jpg";
@@ -23,8 +21,8 @@ import news_3_slide_2 from "../../assets/images/canada-2.jpg";
 import news_3_slide_3 from "../../assets/images/usa-4.jpg";
 
 
-import news_4_slide_1 from "../../assets/images/img6642.jpg";
-import news_4_slide_2 from "../../assets/images/img6642.jpg";
+import news_4_slide_1 from "../../assets/images/img6641.jpg";
+import news_4_slide_2 from "../../assets/images/img6622.jpg";
 import news_4_slide_3 from "../../assets/images/img6642.jpg";
 
 
@@ -206,7 +204,6 @@ class NewsDetails extends Component{
     }
   }
 
-
   render(){
     const history_id = this.props.match.params.id;
 
@@ -308,30 +305,31 @@ class NewsDetails extends Component{
                          className="at-icon-wrapper at-share-btn at-svc-facebook"
                          style={{backgroundColor: "rgb(59, 89, 152)", borderRadius: "12px"}}>
                         <span className="at4-visually-hidden">
-                          Share to Facebook
                         </span>
                         <span className="at-icon-wrapper"
                               style={{lineHeight: "20px", height: "20px", width: "20px"}}>
+                          <i className="fab fa-facebook-f"></i>
+
                         </span>
                       </a>
                       <a role="button" tabIndex="1"
                          className="at-icon-wrapper at-share-btn at-svc-twitter"
                          style={{backgroundColor: "rgb(59, 89, 152)", borderRadius: "12px"}}>
                         <span className="at4-visually-hidden">
-                          Share to Twitter
                         </span>
                         <span className="at-icon-wrapper"
                               style={{lineHeight: "20px", height: "20px", width: "20px"}}>
+                          <i className="fab fa-twitter"></i>
                         </span>
                       </a>
                       <a role="button" tabIndex="1"
                          className="at-icon-wrapper at-share-btn at-svc-linkedin"
                          style={{backgroundColor: "rgb(59, 89, 152)", borderRadius: "12px"}}>
                         <span className="at4-visually-hidden">
-                          Share to LinkedIn
                         </span>
                         <span className="at-icon-wrapper"
                               style={{lineHeight: "20px", height: "20px", width: "20px"}}>
+                          <i className="fab fa-linkedin-in"></i>
                         </span>
                       </a>
                     </div>
