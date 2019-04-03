@@ -78,7 +78,9 @@
 body{
     font-family: MontserratExtraLight !important;
 }
-
+a:focus{
+  outline: none!important;
+}
 .all-content{
     background-image: url(../images/content-bg2.png);
     background-size: 1930px;

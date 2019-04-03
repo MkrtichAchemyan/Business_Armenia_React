@@ -21,15 +21,16 @@ import Event from "./components/event/Event";
 import Partners from "./components/partners/Partners";
 import News from "./components/news/News";
 import NewsDetails from "./components/news_details/News_details";
+import ScrollToTop from 'react-router-scroll-top'
 
 const history = require("history").createBrowserHistory()
 class App extends Component {
-
 
   render() {
     return (
       <>
       <Router history={history}>
+        <ScrollToTop>
         <div className="">
           <SocialBar/>
           <Header
@@ -56,6 +57,7 @@ class App extends Component {
 
           <Footer/>
         </div>
+        </ScrollToTop>
       </Router>
       </>
     );
