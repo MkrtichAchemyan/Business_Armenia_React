@@ -220,12 +220,12 @@ a:focus{
 }
 /*.header-menu  ul.navbar-nav li:hover  .dropdown-menu{
 	display: block;
-}
-.header-menu  ul.navbar-nav li .dropdown-menu li{
-	background-color: rgba(255,255,255,0.8);
 }*/
+.header-menu  ul.navbar-nav li .dropdown-menu li{
+	background-color: #011f04;
+}
 .header-menu  ul.navbar-nav li .dropdown-menu li a{
-    color: #011f04;
+    color: #ffffff;
     border: 1px solid #719c76;
     display: block;
     padding: 9px;
@@ -233,7 +233,8 @@ a:focus{
 }
 .header-menu  ul.navbar-nav li .dropdown-menu li a:hover{
     text-decoration: none;
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgba(255,255,255);
+    color: #011f04;
 }
 .header-menu  ul.navbar-nav li .dropdown-menu>.active>a {
     background-color: transparent;
@@ -1467,7 +1468,7 @@ a.team-all-text-link
 .footprint-button:hover{
     color: #ffffff;
     text-decoration: none;
-    background-color: #014e05;
+    background-color: #012f12;
     outline: none;
 }
 .footprint-button:focus{

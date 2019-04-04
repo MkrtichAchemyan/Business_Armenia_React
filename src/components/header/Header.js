@@ -66,6 +66,7 @@ class Header extends Component{
 
   changeUrl = (url)=>{
     this.props.history.push(url)
+    this.show_hide(false)
   };
   count = 0
   show_hide = ()=>{
@@ -126,15 +127,15 @@ class Header extends Component{
 
                 <ul className="menu">
                   <li className="menu-item"><a className="disabled" onClick={()=>{this.changeUrl('/about')}}>Մեր մասին</a></li>
-                  <li className="menu-item"><a onClick={()=>{this.changeUrl('/about')}}>Հայաստանի մասին</a></li>
-                  <li className="menu-item"><a onClick={()=>{this.changeUrl('/about')}}>Հոգաբարձուների խորհուրդ</a></li>
-                  <li className="menu-item"><a onClick={()=>{this.changeUrl('/about')}}>Մեր թիմը</a></li>
-                  <li className="menu-item"><a onClick={()=>{this.changeUrl('/about')}}>Կորպորատիվ կառավարում</a></li>
-                  <li className="menu-item"><a onClick={()=>{this.changeUrl('/about')}}>Մենք աշխարհում</a></li>
-                  <li className="menu-item"><a onClick={()=>{this.changeUrl('/about')}}>Գործարարների աջակցության ակումբ</a></li>
-                  <li className="menu-item"><a onClick={()=>{this.changeUrl('/about')}}>Միջոցառումներ</a></li>
-                  <li className="menu-item"><a onClick={()=>{this.changeUrl('/about')}}>Նորություններ</a></li>
-                  <li className="menu-item"><a onClick={()=>{this.changeUrl('/about')}}>Գործընկերներ</a></li>
+                  <li className="menu-item"><a onClick={()=>{this.changeUrl('/about-armenia')}}>Հայաստանի մասին</a></li>
+                  <li className="menu-item"><a onClick={()=>{this.changeUrl('/board')}}>Հոգաբարձուների խորհուրդ</a></li>
+                  <li className="menu-item"><a onClick={()=>{this.changeUrl('/team')}}>Մեր թիմը</a></li>
+                  <li className="menu-item"><a onClick={()=>{this.changeUrl('/corporate')}}>Կորպորատիվ կառավարում</a></li>
+                  <li className="menu-item"><a onClick={()=>{this.changeUrl('/footprint')}}>Մենք աշխարհում</a></li>
+                  <li className="menu-item"><a onClick={()=>{this.changeUrl('/business-support-club')}}>Գործարարների աջակցության ակումբ</a></li>
+                  <li className="menu-item"><a onClick={()=>{this.changeUrl('/events')}}>Միջոցառումներ</a></li>
+                  <li className="menu-item"><a onClick={()=>{this.changeUrl('/news')}}>Նորություններ</a></li>
+                  <li className="menu-item"><a onClick={()=>{this.changeUrl('/partners')}}>Գործընկերներ</a></li>
                   <li className="mobile-language-switcher">
                     <div className="btn-group">
                       <button id="w0" className="btn dropdown-toggle" data-toggle="dropdown">ARM <span

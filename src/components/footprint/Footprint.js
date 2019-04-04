@@ -35,12 +35,12 @@ class Footprint extends Component{
     ]
   }
 
-  // componentDidMount(){
-  //   setTimeout(()=>{
-  //     window.scrollTo(0,document.body.scrollHeight);
-  //   },0)
-  //
-  // }
+  componentDidMount(){
+    console.dir(document.body);
+    setTimeout(()=>{
+      this.props.location.state && this.props.location.state.scroll && window.scrollTo(0,document.body.scrollHeight*2)
+    },0)
+  }
 
   changeUrl = (url)=>{
     this.props.history.push(url)

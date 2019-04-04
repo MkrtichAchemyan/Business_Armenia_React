@@ -718,7 +718,7 @@ span.red-asterix {
 }
 .navbar-nav .btn-group .dropdown-menu li a:hover
 {
-    background: #da3b3b;
+  color: #011f04!important;
 }
 
 
@@ -1244,11 +1244,6 @@ a.corporate-style-pdf svg {
 
 .position-without-img {
   margin-top: 298px;
-}
-
-iframe {
-    width: 803px !important;
-    height: 415px !important;
 }
 
 iframe#contact-us-map {

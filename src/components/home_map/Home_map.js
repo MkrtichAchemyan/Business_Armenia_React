@@ -3,7 +3,7 @@ import React, { Component} from 'react'
 
 class HomeMap extends Component{
   changeUrl = (url)=>{
-    this.props.history.push(url)
+    this.props.history.push(url,{scroll: true})
   };
   render(){
 
