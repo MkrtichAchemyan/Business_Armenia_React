@@ -36,7 +36,6 @@ class Footprint extends Component{
   }
 
   componentDidMount(){
-    console.dir(document.body);
     setTimeout(()=>{
       this.props.location.state && this.props.location.state.scroll && window.scrollTo(0,document.body.scrollHeight*2)
     },0)
@@ -56,10 +55,11 @@ class Footprint extends Component{
 
   render(){
     const {items} = this.state;
+    const href = `javascript:void(0)`
     const pointer = items.map(item=>
 
       <div key={item.id}>
-        <a onClick={()=>{this.changeUrl(item.link+item.id)}} id={'pointer'+item.id} title=""
+        <a href={href} onClick={()=>{this.changeUrl(item.link+item.id)}} id={'pointer'+item.id} title=""
            className={`map-info-circle map-info-circle${item.id}`}
            onMouseOver={(e)=>{this.mouseOver(e,'tooltip'+item.id)}}
            onMouseOut={(e)=>{this.mouseOut(e,'tooltip'+item.id)}}
@@ -76,7 +76,7 @@ class Footprint extends Component{
         </div>
           <div className="tooltip-inner">
             <div className="map-info-img-div"></div >
-            <a href="#">
+            <a href={href}>
               <div
                 className="map-info-text-div" >
                 <p className="map-info-text-name" >
@@ -88,7 +88,7 @@ class Footprint extends Component{
                 <b>
                   <b>
                     <p>
-                      <img className="footprint-flag-index" src={item.flag} />
+                      <img className="footprint-flag-index" src={item.flag} alt=''/>
                       {item.country}
                     </p>
                   </b>
@@ -120,7 +120,7 @@ class Footprint extends Component{
 
             <div className="row footprint-map-all">
               <div className="col-xs-12">
-                <img src={map} className="img-responsive footprint-map-img"/>
+                <img src={map} className="img-responsive footprint-map-img" alt=''/>
 
                   <div className="footprint-map-all-info">
                     {pointer}

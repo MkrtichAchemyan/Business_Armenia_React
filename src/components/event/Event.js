@@ -57,6 +57,7 @@ class Event extends Component{
     const history_id = this.props.match.params.id;
 
     const {events} = this.state
+    const href = `javascript:void(0)`
     let event = events.map((event)=>{
 
       return event.id === +history_id && <div className="col-xs-12" key={event.id}>
@@ -85,7 +86,7 @@ class Event extends Component{
             {event.text}
           </p>
           <p>
-            <a href="#"
+            <a href={href}
                className="attachmentWrapper">
               <i className="far fa-file-pdf iconPdf"></i>
               Կից տեղեկատվություն
@@ -103,6 +104,7 @@ class Event extends Component{
                aria-labelledby="at-187295c0-c07f-4749-9304-84a198f16dec" role="region">
             <div className="at-share-btn-elements">
               <a role="button" tabIndex="1"
+                 href={href}
                  className="at-icon-wrapper at-share-btn at-svc-facebook"
                  style={{backgroundColor: "rgb(59, 89, 152)", borderRadius: "12px"}}>
                         <span className="at4-visually-hidden">
@@ -124,6 +126,7 @@ class Event extends Component{
                         </span>
               </a>
               <a role="button" tabIndex="1"
+                 href={href}
                  className="at-icon-wrapper at-share-btn at-svc-twitter"
                  style={{backgroundColor: "rgb(59, 89, 152)", borderRadius: "12px"}}>
                         <span className="at4-visually-hidden">
@@ -146,6 +149,7 @@ class Event extends Component{
                         </span>
               </a>
               <a role="button" tabIndex="1"
+                 href={href}
                  className="at-icon-wrapper at-share-btn at-svc-linkedin"
                  style={{backgroundColor: "rgb(59, 89, 152)", borderRadius: "12px"}}>
                         <span className="at4-visually-hidden">

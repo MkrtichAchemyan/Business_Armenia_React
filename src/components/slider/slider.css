@@ -193,7 +193,6 @@
 }
 
 .blog-slider__button:hover, a:focus {
-  color: white!important;
   /*transition-delay: 0.6s; !important;*/
   text-decoration: none !important;
 }

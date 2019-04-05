@@ -45,6 +45,7 @@ class Team extends Component{
   }
   render(){
     const {persons} = this.state;
+    const href = `javascript:void(0)`
     const person = persons.map(person=>
       <div className="col-xs-12 col-sm-6 col-md-4 team-all-col" key={person.id}>
         <div className="team-all">
@@ -54,7 +55,7 @@ class Team extends Component{
           <div className="team-all-text">
             <h3>{person.fullName}</h3>
             <p>{person.position}</p>
-            <a href="#"
+            <a href={href}
                className="team-all-text-link">
               {person.email}
             </a>
@@ -83,12 +84,11 @@ class Team extends Component{
               <div className="col-xs-12 col-sm-6 col-md-4 team-all-col">
                 <div className="team-all">
                   <div className="team-all-img">
-                    <img src={papazyan} className="img-responsive" />
+                    <img src={papazyan} className="img-responsive" alt=''/>
                   </div>
                   <div className="team-all-text">
                     <h3>Դավիթ Փափազյան</h3>
                     <p>Գործադիր տնօրեն</p>
-                    <a href="#" className="team-all-text-link"></a>
                   </div>
                 </div>
               </div>

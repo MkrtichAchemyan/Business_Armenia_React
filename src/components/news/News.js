@@ -74,12 +74,13 @@ class News extends Component{
 
 
   render(){
+    const href = `javascript:void(0)`
     const {news} = this.state;
     const news_i = news.map(news=>
       <div data-key={news.id} key={news.id}>
         <div className="col-sm-4">
           <div className="home-news-content" style={{backgroundImage: `url(${news.img})`}}>
-            <a onClick={()=>{this.changeUrl('/news/'+news.id)}}>
+            <a href={href} onClick={()=>{this.changeUrl('/news/'+news.id)}}>
               <div className="home-news-content-div">
 
                 <div className="home-news-content-date">
@@ -121,13 +122,12 @@ class News extends Component{
 
                   <div className="item active">
                     <div className="carousel-caption">
-                      <a
-                      href="#">
+                      <a href={href}>
                         <h3
                       className="news-slider-title home-news-content-text-h3">Բիզնեսի 16 գործընկեր. Գործարարների
                       աջակցության ակումբը շարունակում է համալրվել </h3></a></div>
-                    <a href="#">
-                      <img className="news-img" src={slide} style={{width:"100%", height:"400px"}} />
+                    <a href={href}>
+                      <img className="news-img" src={slide} style={{width:"100%", height:"400px"}} alt=''/>
                     </a>
                   </div>
 

@@ -84,11 +84,12 @@ class Header extends Component{
 
     render(){
       const {navItems} = this.state
+      const href = `javascript:void(0)`
       const navLi = navItems.map((item,index) =>{
         return(
           index===0?
             <li key={item.id} className='dropdown'>
-                <a onClick={()=>{this.changeUrl('/about')}} className="dropdown-toggle disabled" data-toggle="dropdown">
+                <a href={href} onClick={()=>{this.changeUrl('/about')}} className="dropdown-toggle disabled" data-toggle="dropdown">
                   {item.text}
                   <span className="caret"></span>
                   </a>
@@ -96,7 +97,7 @@ class Header extends Component{
                 {item.list.map((item)=>{
                     return(
                       <li key={item.id}>
-                          <a onClick={()=>{this.changeUrl(item.link)}}>
+                          <a href={href} onClick={()=>{this.changeUrl(item.link)}}>
                            {item.text}
                           </a>
                       </li>
@@ -107,7 +108,7 @@ class Header extends Component{
             </li>
             :
             <li key={item.id}>
-              <a onClick={()=>{this.changeUrl(item.link)}}>
+              <a href={href} onClick={()=>{this.changeUrl(item.link)}}>
                  {item.text}
                 </a>
             </li>
@@ -126,16 +127,16 @@ class Header extends Component{
                 </div>
 
                 <ul className="menu">
-                  <li className="menu-item"><a className="disabled" onClick={()=>{this.changeUrl('/about')}}>Մեր մասին</a></li>
-                  <li className="menu-item"><a onClick={()=>{this.changeUrl('/about-armenia')}}>Հայաստանի մասին</a></li>
-                  <li className="menu-item"><a onClick={()=>{this.changeUrl('/board')}}>Հոգաբարձուների խորհուրդ</a></li>
-                  <li className="menu-item"><a onClick={()=>{this.changeUrl('/team')}}>Մեր թիմը</a></li>
-                  <li className="menu-item"><a onClick={()=>{this.changeUrl('/corporate')}}>Կորպորատիվ կառավարում</a></li>
-                  <li className="menu-item"><a onClick={()=>{this.changeUrl('/footprint')}}>Մենք աշխարհում</a></li>
-                  <li className="menu-item"><a onClick={()=>{this.changeUrl('/business-support-club')}}>Գործարարների աջակցության ակումբ</a></li>
-                  <li className="menu-item"><a onClick={()=>{this.changeUrl('/events')}}>Միջոցառումներ</a></li>
-                  <li className="menu-item"><a onClick={()=>{this.changeUrl('/news')}}>Նորություններ</a></li>
-                  <li className="menu-item"><a onClick={()=>{this.changeUrl('/partners')}}>Գործընկերներ</a></li>
+                  <li className="menu-item"><a href={href} className="disabled" onClick={()=>{this.changeUrl('/about')}}>Մեր մասին</a></li>
+                  <li className="menu-item"><a href={href} onClick={()=>{this.changeUrl('/about-armenia')}}>Հայաստանի մասին</a></li>
+                  <li className="menu-item"><a href={href} onClick={()=>{this.changeUrl('/board')}}>Հոգաբարձուների խորհուրդ</a></li>
+                  <li className="menu-item"><a href={href} onClick={()=>{this.changeUrl('/team')}}>Մեր թիմը</a></li>
+                  <li className="menu-item"><a href={href} onClick={()=>{this.changeUrl('/corporate')}}>Կորպորատիվ կառավարում</a></li>
+                  <li className="menu-item"><a href={href} onClick={()=>{this.changeUrl('/footprint')}}>Մենք աշխարհում</a></li>
+                  <li className="menu-item"><a href={href} onClick={()=>{this.changeUrl('/business-support-club')}}>Գործարարների աջակցության ակումբ</a></li>
+                  <li className="menu-item"><a href={href} onClick={()=>{this.changeUrl('/events')}}>Միջոցառումներ</a></li>
+                  <li className="menu-item"><a href={href} onClick={()=>{this.changeUrl('/news')}}>Նորություններ</a></li>
+                  <li className="menu-item"><a href={href} onClick={()=>{this.changeUrl('/partners')}}>Գործընկերներ</a></li>
                   <li className="mobile-language-switcher">
                     <div className="btn-group">
                       <button id="w0" className="btn dropdown-toggle" data-toggle="dropdown">ARM <span
@@ -143,7 +144,7 @@ class Header extends Component{
                       </button>
 
                       <ul id="w1" className="dropdown-menu">
-                        <li><a href="#" tabIndex="-1">ENG</a></li>
+                        <li><a href={href} tabIndex="-1">ENG</a></li>
                       </ul>
                     </div>
                   </li>
@@ -163,7 +164,7 @@ class Header extends Component{
                         <span className="icon-bar"></span>
                         <span className="icon-bar"></span>
                       </button>
-                      <a onClick={()=>{this.changeUrl('/')}}>
+                      <a href={href} onClick={()=>{this.changeUrl('/')}}>
                             {navBrand}
                         </a>
                     </div>
@@ -171,7 +172,7 @@ class Header extends Component{
                       <ul id="w5" className="navbar-nav navbar-right nav">
                           {navLi}
                         <li>
-                          <a href="#">
+                          <a href={href}>
                             <i className="fas fa-search"></i>
                           </a>
                         </li>
@@ -182,7 +183,7 @@ class Header extends Component{
                               <span className="caret"></span></button>
                             <ul id="w4" className="dropdown-menu">
                               <li>
-                                <a href="#" tabIndex="-1">ENG</a>
+                                <a href={href} tabIndex="-1">ENG</a>
                               </li>
                             </ul>
                           </div>

@@ -25,6 +25,7 @@ class Slider extends Component{
   }
   render(){
     const {slides} = this.props
+    const href = `javascript:void(0)`
     const slide = slides.map(item=>
 
             <div className="blog-slider__item swiper-slide" key={item.id}>
@@ -37,7 +38,7 @@ class Slider extends Component{
                 <div className="blog-slider__text">
                   {item.text}
                 </div>
-                <a href="#" className="blog-slider__button">READ MORE</a>
+                <a href={href} className="blog-slider__button">READ MORE</a>
               </div>
             </div>
     )

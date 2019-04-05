@@ -34,8 +34,9 @@ class Social_bar extends Component{
 
   render(){
     const {social_items} = this.state
+    const href = `javascript:void(0)`
     const social_item = social_items.map(item=>
-      <a href="#" key={item.id} target="_blank">
+      <a href={href} key={item.id} target="_blank"  rel="noopener noreferrer">
         <img id={item.id} src={item.src} alt=''/>
       </a>
     )

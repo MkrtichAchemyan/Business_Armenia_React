@@ -53,7 +53,7 @@ class FootprintItem extends Component{
 
   render(){
     const history_id = this.props.match.params.id;
-
+    const href = `javascript:void(0)`
     const {persons} = this.state
     let person = persons.map((person)=>{
 
@@ -75,13 +75,13 @@ class FootprintItem extends Component{
 
               <div className="team-all representative-single">
                 <div className="team-all-img">
-                  <img src={person.img} className="img-responsive rep-image" />
+                  <img src={person.img} className="img-responsive rep-image" alt=''/>
                 </div>
 
                 <div className="team-all-text">
                         <span>
                           <h3>{person.fullName}</h3>
-                          <a href="#">{person.email}</a>
+                          <a href={href}>{person.email}</a>
                         </span>
                 </div>
               </div>

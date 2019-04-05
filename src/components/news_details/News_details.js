@@ -206,6 +206,7 @@ class NewsDetails extends Component{
 
   render(){
     const history_id = this.props.match.params.id;
+    const href = `javascript:void(0)`
 
     const {news} = this.state
     let news_item = news.map((news)=>{
@@ -256,11 +257,11 @@ class NewsDetails extends Component{
               {
               news.slides.map(slide=>slide.data_slide===0?
                 <div className="item active" key={slide.data_slide}>
-                  <img src={slide.img} style={{width:"100%"}} />
+                  <img src={slide.img} style={{width:"100%"}} alt='' />
                 </div>
                 :
                 <div className="item" key={slide.data_slide}>
-                  <img src={slide.img} style={{width:"100%"}} />
+                  <img src={slide.img} style={{width:"100%"}} alt=''/>
                 </div>
               )}
             </div>
@@ -299,6 +300,7 @@ class NewsDetails extends Component{
                        aria-labelledby="at-187295c0-c07f-4749-9304-84a198f16dec" role="region">
                     <div className="at-share-btn-elements">
                       <a role="button" tabIndex="1"
+                         href={href}
                          className="at-icon-wrapper at-share-btn at-svc-facebook"
                          style={{backgroundColor: "rgb(59, 89, 152)", borderRadius: "12px"}}>
                         <span className="at4-visually-hidden">
@@ -320,6 +322,7 @@ class NewsDetails extends Component{
                         </span>
                       </a>
                       <a role="button" tabIndex="1"
+                         href={href}
                          className="at-icon-wrapper at-share-btn at-svc-twitter"
                          style={{backgroundColor: "rgb(59, 89, 152)", borderRadius: "12px"}}>
                         <span className="at4-visually-hidden">
@@ -342,6 +345,7 @@ class NewsDetails extends Component{
                         </span>
                       </a>
                       <a role="button" tabIndex="1"
+                         href={href}
                          className="at-icon-wrapper at-share-btn at-svc-linkedin"
                          style={{backgroundColor: "rgb(59, 89, 152)", borderRadius: "12px"}}>
                         <span className="at4-visually-hidden">

@@ -159,7 +159,7 @@ class Partners extends Component{
     const armenianPartners = armenian_partners.map(item=>
       <div key={item.id} className="col-xs-6 col-md-2">
         <div className="home-partner">
-          <a href="#" target="_blank">
+          <a href={'http://www.gov.am/am/'} rel="noopener noreferrer" target="_blank">
             <img src={item.src} alt='' className="img-responsive" />
           </a>
         </div>
@@ -168,7 +168,7 @@ class Partners extends Component{
     const internationalPartners = international_partners.map(item=>
       <div key={item.id} className="col-xs-6 col-md-2">
         <div className="home-partner">
-          <a href="#" target="_blank">
+          <a href={'http://www.gov.am/am/'} rel="noopener noreferrer" target="_blank">
             <img src={item.src} alt='' className="img-responsive" />
           </a>
         </div>

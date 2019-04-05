@@ -38,6 +38,7 @@ class Events extends Component{
 
 
   render(){
+    const href = `javascript:void(0)`
     const {events} = this.state;
     const event = events.map(event=>
       <div data-key={event.id} key={event.id}>
@@ -69,7 +70,7 @@ class Events extends Component{
                 </div>
               </div>
             </div>
-            <a onClick={()=>{this.changeUrl('/events/'+event.id)}}>
+            <a href={href} onClick={()=>{this.changeUrl('/events/'+event.id)}}>
               <div className="event-read-more">
                 <p>Ավելին...</p>
               </div>
@@ -101,18 +102,18 @@ class Events extends Component{
                   </button>
 
                   <ul className="dropdown-menu event-cat-menu-list" aria-labelledby="dropdownMenu1">
-                    <li><a href="#">Հայաստան</a></li>
-                    <li><a href="#">Չինաստան</a></li>
-                    <li><a href="#">Ֆրանսիա</a></li>
-                    <li><a href="#">Վրաստան</a></li>
-                    <li><a href="#">Իրան</a></li>
-                    <li><a href="#">Իրաք</a></li>
-                    <li><a href="#">Իտալիա</a></li>
-                    <li><a href="#">Ճապոնիա</a></li>
-                    <li><a href="#">Ղազախստան</a></li>
-                    <li><a href="#">Լեհաստան</a></li>
-                    <li><a href="#">Ռուսաստան</a></li>
-                    <li><a href="#">Սիրիա</a></li>
+                    <li><a href={href}>Հայաստան</a></li>
+                    <li><a href={href}>Չինաստան</a></li>
+                    <li><a href={href}>Ֆրանսիա</a></li>
+                    <li><a href={href}>Վրաստան</a></li>
+                    <li><a href={href}>Իրան</a></li>
+                    <li><a href={href}>Իրաք</a></li>
+                    <li><a href={href}>Իտալիա</a></li>
+                    <li><a href={href}>Ճապոնիա</a></li>
+                    <li><a href={href}>Ղազախստան</a></li>
+                    <li><a href={href}>Լեհաստան</a></li>
+                    <li><a href={href}>Ռուսաստան</a></li>
+                    <li><a href={href}>Սիրիա</a></li>
                   </ul>
                 </div>
                 <div className="dropdown event-cat-menu-block">
@@ -121,11 +122,11 @@ class Events extends Component{
                     Կատեգորիա <span className="caret"></span>
                   </button>
                   <ul className="dropdown-menu event-cat-menu-list" aria-labelledby="dropdownMenu1">
-                    <li><a href="#">Բոլորը</a></li>
-                    <li><a href="#">Ցուցահանդես</a></li>
-                    <li><a href="#">Տենդեր</a></li>
-                    <li><a href="#">Ֆորում</a></li>
-                    <li><a href="#">Քննարկում</a></li>
+                    <li><a href={href}>Բոլորը</a></li>
+                    <li><a href={href}>Ցուցահանդես</a></li>
+                    <li><a href={href}>Տենդեր</a></li>
+                    <li><a href={href}>Ֆորում</a></li>
+                    <li><a href={href}>Քննարկում</a></li>
                   </ul>
                 </div>
               </div>

@@ -22,6 +22,8 @@ import Partners from "./components/partners/Partners";
 import News from "./components/news/News";
 import NewsDetails from "./components/news_details/News_details";
 import ScrollToTop from 'react-router-scroll-top'
+import CorporateStyle from "./components/corporate_style/Corporate_style";
+import Contacts from "./components/contacts/Contacts";
 
 const history = require("history").createBrowserHistory()
 class App extends Component {
@@ -52,10 +54,14 @@ class App extends Component {
               <Route exact path='/partners' component={Partners}></Route>
               <Route exact path='/news' component={News}></Route>
               <Route exact path='/news/:id' component={NewsDetails}></Route>
+              <Route exact path='/corporate-style' component={CorporateStyle}></Route>
+              <Route exact path='/contacts' component={Contacts}></Route>
               <Route exact path='*' component={Home}><Redirect to="/"/></Route>
             </Switch>
 
-          <Footer/>
+          <Footer
+            history={history}
+          />
         </div>
         </ScrollToTop>
       </Router>

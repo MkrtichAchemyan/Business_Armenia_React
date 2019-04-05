@@ -55,7 +55,7 @@ class Corporate extends Component{
 
         <div className="col-md-1 corporate-pdf">
           <div className="corporate-pdf-all ">
-            <a href={item.src} target="_blank" className="attachmentWrapper">
+            <a href={item.src} target="_blank" rel="noopener noreferrer" className="attachmentWrapper">
                <div className="corporate-pdf-icon">
                  <i className="far fa-file-pdf"></i>
                </div>

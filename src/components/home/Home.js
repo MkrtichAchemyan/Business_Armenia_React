@@ -104,7 +104,8 @@ class Home extends Component{
         day:'13',
         month:'Մարտ',
         year:'2019',
-        text:'Հայաստանյան կաշվե արտադրության պոտենցիալը ներկայացված է միջազգային ցուցահանդեսում...'
+        text:'Հայաստանյան կաշվե արտադրության պոտենցիալը ներկայացված է միջազգային ցուցահանդեսում...',
+        link:"/news/1"
       },
       {
         id:2,
@@ -112,7 +113,8 @@ class Home extends Component{
         day:'12',
         month:'Մարտ',
         year:'2019',
-        text:'Բուլղարացի գործարարներին են ներկայացվել Հայաստանի ներդրումային հնարավորությունները...'
+        text:'Բուլղարացի գործարարներին են ներկայացվել Հայաստանի ներդրումային հնարավորությունները...',
+        link:"/news/2"
       }
     ],
     events:[
@@ -122,7 +124,8 @@ class Home extends Component{
         day:'12-15',
         month:'Մարտ',
         year:'2019',
-        text:'2019 թ.-ի մարտի 12-15-ին կկայանա «Mos Shoes» միջազգային ցուցահանդեսը...'
+        text:'2019 թ.-ի մարտի 12-15-ին կկայանա «Mos Shoes» միջազգային ցուցահանդեսը...',
+        link:"/events/1"
       }
     ],
     slides:[
@@ -163,14 +166,17 @@ class Home extends Component{
                 />
                 <IndexNumbers
                   index_numbers={index_numbers}
+                  history={this.props.history}
                 />
                 <NewsAndEvents
                   news={news}
                   events={events}
+                  history={this.props.history}
                 />
                 <HomeMap history={this.props.history}/>
                 <HomePartners
                   partners={partners}
+                  history={this.props.history}
                 />
               </>
             </>

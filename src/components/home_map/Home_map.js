@@ -6,7 +6,7 @@ class HomeMap extends Component{
     this.props.history.push(url,{scroll: true})
   };
   render(){
-
+    const href = `javascript:void(0)`
     return(
       <>
         <div className="container-fluid">
@@ -14,7 +14,7 @@ class HomeMap extends Component{
             <div className="col-xs-12">
               <p className="home-map-title1">Դառնալ մեր</p>
               <p className="home-map-title2">Ներկայացուցիչը</p>
-              <a className="home-map-link" onClick={()=>{this.changeUrl('/footprint')}}>Միանալ մեզ</a>
+              <a href={href} className="home-map-link" onClick={()=>{this.changeUrl('/footprint')}}>Միանալ մեզ</a>
             </div>
           </div>
         </div>

@@ -3,7 +3,12 @@ import logo from '../../assets/images/logo.png'
 
 
 class Footer extends Component{
+  changeUrl = (url)=>{
+    this.props.history.push(url)
+  };
+
   render(){
+    const href = `javascript:void(0)`
     return(
       <footer className="mainfooter">
         <div className="container">
@@ -11,8 +16,8 @@ class Footer extends Component{
           <div className="row">
             <div className="col-md-3 footer-menu2">
               <ul>
-                <li><a href="#">Բրենդ և կորպորատիվ ոճ</a></li>
-                <li><a href="#">Կապ</a></li>
+                <li><a href={href} onClick={()=>{this.changeUrl('/corporate-style')}}>Բրենդ և կորպորատիվ ոճ</a></li>
+                <li><a href={href} onClick={()=>{this.changeUrl('/contacts')}}>Կապ</a></li>
               </ul>
             </div>
 
@@ -20,10 +25,10 @@ class Footer extends Component{
             <div className=" col-md-3">
               <div className="footer-menu2">
                 <ul>
-                  <li><a href="#">Մեր մասին</a></li>
-                  <li><a href="#">Մեր թիմը</a></li>
-                  <li><a href="#">Հոգաբարձուների խորհուրդ</a></li>
-                  <li><a href="#">Կորպորատիվ կառավարում</a></li>
+                  <li><a href={href} onClick={()=>{this.changeUrl('/about')}}>Մեր մասին</a></li>
+                  <li><a href={href} onClick={()=>{this.changeUrl('/team')}}>Մեր թիմը</a></li>
+                  <li><a href={href} onClick={()=>{this.changeUrl('/board')}}>Հոգաբարձուների խորհուրդ</a></li>
+                  <li><a href={href} onClick={()=>{this.changeUrl('/corporate')}}>Կորպորատիվ կառավարում</a></li>
                 </ul>
               </div>
 
@@ -33,10 +38,10 @@ class Footer extends Component{
 
               <div className="footer-menu3">
                 <ul>
-                  <li><a href="#">Նորություններ</a></li>
-                  <li><a href="#">Միջոցառումներ</a></li>
-                  <li><a href="#">Մենք աշխարհում</a></li>
-                  <li><a href="#">Աշխատատեղեր</a></li>
+                  <li><a href={href} onClick={()=>{this.changeUrl('/news')}}>Նորություններ</a></li>
+                  <li><a href={href} onClick={()=>{this.changeUrl('/events')}}>Միջոցառումներ</a></li>
+                  <li><a href={href} onClick={()=>{this.changeUrl('/footprint')}}>Մենք աշխարհում</a></li>
+                  <li><a href={href} onClick={()=>{this.changeUrl('/vacancy')}}>Աշխատատեղեր</a></li>
                 </ul>
               </div>
 
@@ -50,8 +55,8 @@ class Footer extends Component{
                   <br/> Երևան, Հայաստան
                   <br/>+374 00 000000
                 </p>
-                <a href="" target="_blank">example.am</a>
-                <a href="#">test@test.am</a>
+                <a href={href} target="_blank" rel="noopener noreferrer">example.am</a>
+                <a href={href}>test@test.am</a>
 
               </div>
             </div>
@@ -65,12 +70,12 @@ class Footer extends Component{
 
 
                 <div className="col-sm-6 footer-bottom-left">
-                  <img src={logo} className="img-responsive" />
+                  <img src={logo} className="img-responsive" alt=''/>
                 </div>
                 <div className="col-sm-6 footer-bottom-center">
                   <div>
                     <p className="footer-bottom-center-text">Կայքը</p>
-                    <a href="#" className="footer-bottom-center-link" target="_blank">
+                    <a href={href} className="footer-bottom-center-link" rel="noopener noreferrer" target="_blank">
                     </a>
                   </div>
                 </div>

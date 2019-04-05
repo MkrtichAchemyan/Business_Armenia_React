@@ -29,11 +29,12 @@ class BusinessSupportClub extends Component{
     ]
   }
   render(){
+    const href = `javascript:void(0)`
     const {items} = this.state;
     const item = items.map(item=>
       <div key={item.id}>
         <div className="container business-support-member-single">
-          <a href="#">
+          <a href={href}>
             <div className="col-md-2 business-support-member ">
               <img src={item.img} className="img-responsive " alt=''/>
             </div>
@@ -48,7 +49,7 @@ class BusinessSupportClub extends Component{
               </p>
             </div>
             <div className="business-support-member-show-link">
-              <a href="#">ավելին
+              <a href={href}>ավելին
                 <span>
                 <i className="fas fa-arrow-right"></i>
                 </span>
