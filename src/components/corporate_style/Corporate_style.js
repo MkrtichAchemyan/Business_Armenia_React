@@ -5,45 +5,6 @@ import img_2 from '../../assets/images/0038.jpg'
 
 
 class CorporateStyle extends Component{
-  state={
-    items:[
-      {
-        id:1,
-        date:"16.03.2018",
-        title:"ԻՆՍԱՅԴԵՐԱԿԱՆ ՔԱՂԱՔԱԿԱՆՈՒԹՅՈՒՆ",
-        size:'7.9 Մբ',
-        src: pdf
-      },
-      {
-        id:2,
-        date:"16.03.2018",
-        title:"ԻՆՍԱՅԴԵՐԱԿԱՆ ՔԱՂԱՔԱԿԱՆՈՒԹՅՈՒՆ",
-        size:'7.9 Մբ',
-        src: pdf
-      },
-      {
-        id:3,
-        date:"16.03.2018",
-        title:"ԻՆՍԱՅԴԵՐԱԿԱՆ ՔԱՂԱՔԱԿԱՆՈՒԹՅՈՒՆ",
-        size:'7.9 Մբ',
-        src: pdf
-      },
-      {
-        id:4,
-        date:"16.03.2018",
-        title:"ԻՆՍԱՅԴԵՐԱԿԱՆ ՔԱՂԱՔԱԿԱՆՈՒԹՅՈՒՆ",
-        size:'7.9 Մբ',
-        src: pdf
-      },
-      {
-        id:5,
-        date:"16.03.2018",
-        title:"ԻՆՍԱՅԴԵՐԱԿԱՆ ՔԱՂԱՔԱԿԱՆՈՒԹՅՈՒՆ",
-        size:'7.9 Մբ',
-        src: pdf
-      },
-    ]
-  }
   render(){
 
     return(

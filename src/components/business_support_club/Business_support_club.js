@@ -1,37 +1,21 @@
 import React, { Component } from 'react'
-import avenue_consulting from '../../assets/images/avenue-consulting-group.png'
-import arlian from '../../assets/images/arlian.jpg'
-import proservise from '../../assets/images/proservice-l.png'
+import {getBusinessSupportClub} from "../../actions";
+import {connect} from "react-redux/src";
 
 
 
 class BusinessSupportClub extends Component{
-  state={
-    items:[
-      {
-        id:1,
-        name:"ԱՎԵՆՅՈՒ ՔԸՆՍԱԼԹԻՆԳ ԳՐՈՒՓ",
-        text:"«Ավենյու քընսալթինգ գրուփը» անվճար տրամադրում է տնտեսության որևէ ճյուղի, մարդկային ռեսուրսների կառավարման համակարգի վերաբերյալ հակիրճ վերլուծություն, մշակում է կոմերցիոն պայմանագիր։ Ընկերությունը իր մյուս բոլոր ծառայությունները մատուցում է 30 տոկոս զեղչով։",
-        img:avenue_consulting,
-      },
-      {
-        id:2,
-        name:"ԱՐԼԻԱՆ",
-        text:"«ԱՐԼԻԱՆ»խորհրդատվական և թրեյնինգային ընկերությունը անվճար ախտորոշում է տնտեսվարող սուբյեկտի վիճակը, գնահատում վաճառքներով զբաղվող աշխատակազմի մասնագիտական կարողությունները, տրամադրում խորհրդատվություն, մշակում է մարքեթինգային եռամսյա բյուջե։ 20 տոկոս զեղչով տրամադրում է բիզնեսի կառավարման, պլանավորման, մարքեթինգային խորհրդատվություն, անցկացնում կադրային աուդիտ։",
-        img:arlian,
-      },
-      {
-        id:3,
-        name:"ՊՐՈՍԵՐՎԻԶ Լ",
-        text:"«Պրոսերվիզ Լ»ընկերությունը մարդկային ռեսուրսների կառավարման անվճար աուդիտ է անցկացնում։ 20 տոկոս զեղչով տրամադրում է անձնակազմի կառավարման խորհրդատվություն, տեղադրում ավտոմատացված համակարգ, կազմակերպում դասընթացներ։",
-        img:proservise,
-      }
-    ]
+
+
+  componentDidMount() {
+    this.props.businessSupportClub()
+
   }
+
   render(){
     const href = `javascript:void(0)`
-    const {items} = this.state;
-    const item = items.map(item=>
+    const items = this.props.data;
+    const item = items && items.map(item=>
       <div key={item.id}>
         <div className="container business-support-member-single">
           <a href={href}>
@@ -95,4 +79,16 @@ class BusinessSupportClub extends Component{
   }
 }
 
-export default BusinessSupportClub
+const mapStateToProps = (state)=>{
+  console.log(state);
+  return {
+    data: state.business_support_club.data
+  }
+}
+
+const mapDispatchToProps = {
+  businessSupportClub: getBusinessSupportClub,
+};
+
+
+export default connect(mapStateToProps,mapDispatchToProps)(BusinessSupportClub)

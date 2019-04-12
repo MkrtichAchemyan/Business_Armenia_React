@@ -1,50 +1,18 @@
 import React, { Component } from 'react'
-import avinyan from '../../assets/images/artak-poghosyan.jpg'
+
 import papazyan from "../../assets/images/david-papazyan.jpg"
+import {getTeam} from "../../actions";
+import {connect} from "react-redux/src";
 
 
 class Team extends Component{
-  state={
-    persons:[
-      {
-        id:1,
-        fullName:"ԱՐՏԱԿ ՊՈՂՈՍՅԱՆ",
-        position:"Ֆինանսատնտեսական և իրավաբանական խմբի տնօրեն",
-        img:avinyan,
-        email: 'example@gmail.com'
-      },
-      {
-        id:2,
-        fullName:"ԱՐՏԱԿ ՊՈՂՈՍՅԱՆ",
-        position:"Ֆինանսատնտեսական և իրավաբանական խմբի տնօրեն",
-        img:avinyan,
-        email: 'example@gmail.com'
-      },
-      {
-        id:3,
-        fullName:"ԱՐՏԱԿ ՊՈՂՈՍՅԱՆ",
-        position:"Ֆինանսատնտեսական և իրավաբանական խմբի տնօրեն",
-        img:avinyan,
-        email: 'example@gmail.com'
-      },
-      {
-        id:4,
-        fullName:"ԱՐՏԱԿ ՊՈՂՈՍՅԱՆ",
-        position:"Ֆինանսատնտեսական և իրավաբանական խմբի տնօրեն",
-        img:avinyan,
-        email: 'example@gmail.com'
-      },
-      {
-        id:5,
-        fullName:"ԱՐՏԱԿ ՊՈՂՈՍՅԱՆ",
-        position:"Ֆինանսատնտեսական և իրավաբանական խմբի տնօրեն",
-        img:avinyan,
-        email: 'example@gmail.com'
-      }
-    ]
+
+  componentDidMount() {
+    this.props.team()
   }
+
   render(){
-    const {persons} = this.state;
+    const persons = this.props.data;
     const href = `javascript:void(0)`
     const person = persons.map(person=>
       <div className="col-xs-12 col-sm-6 col-md-4 team-all-col" key={person.id}>
@@ -104,4 +72,18 @@ class Team extends Component{
   }
 }
 
-export default Team
+const mapStateToProps = (state)=>{
+  console.log(state);
+  return {
+    data: state.team.data
+  }
+}
+
+
+
+const mapDispatchToProps = {
+  team: getTeam,
+};
+
+
+export default connect(mapStateToProps,mapDispatchToProps)(Team)

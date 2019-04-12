@@ -1,204 +1,15 @@
 import React, { Component } from 'react'
-import news_1 from "../../assets/images/img6624.jpg";
-import news_2 from "../../assets/images/aram.jpg";
-import news_3 from "../../assets/images/chicago.jpg";
-import news_4 from "../../assets/images/img6440.jpg";
-import news_5 from "../../assets/images/amore.jpg";
-import news_6 from "../../assets/images/kwop8883.jpg";
-
-
-
-import news_1_slide_1 from "../../assets/images/img6641.jpg";
-import news_1_slide_2 from "../../assets/images/img6622.jpg";
-import news_1_slide_3 from "../../assets/images/img6642.jpg";
-
-import news_2_slide_1 from "../../assets/images/img3584.jpg";
-import news_2_slide_2 from "../../assets/images/img3623.jpg";
-import news_2_slide_3 from "../../assets/images/img3653.jpg";
-
-import news_3_slide_1 from "../../assets/images/usa.jpg";
-import news_3_slide_2 from "../../assets/images/canada-2.jpg";
-import news_3_slide_3 from "../../assets/images/usa-4.jpg";
-
-
-import news_4_slide_1 from "../../assets/images/img6641.jpg";
-import news_4_slide_2 from "../../assets/images/img6622.jpg";
-import news_4_slide_3 from "../../assets/images/img6642.jpg";
-
-
-import news_5_slide_1 from "../../assets/images/img3584.jpg";
-import news_5_slide_2 from "../../assets/images/img3623.jpg";
-import news_5_slide_3 from "../../assets/images/img3653.jpg";
-
-
-import news_6_slide_1 from "../../assets/images/usa.jpg";
-import news_6_slide_2 from "../../assets/images/canada-2.jpg";
-import news_6_slide_3 from "../../assets/images/usa-4.jpg";
-
-
-
-
+import {getNews} from "../../actions";
+import {connect} from "react-redux/src";
 
 class NewsDetails extends Component{
-  state={
-    news:[
-      {
-        id:1,
-        slides:[
-          {
-            img:news_1_slide_1,
-            data_slide:0
-          },
-          {
-            img:news_1_slide_2,
-            data_slide:1
-          },
-          {
-            img:news_1_slide_3,
-            data_slide:2
-          }
-        ],
-        day:'14-21 ',
-        month:'ՄԱՐՏ',
-        year:'2019',
-        title:'Գյուղատնտեսական և անասնապահական ապրանքների և արտադրանքի ցուցահանդես',
-        img: news_1,
-        text:'Տեղեկացնում ենք, որ Իրաքի Հանրապետության մայրաքաղաք Բաղդադում ս․թ․ մարտի 14-21-ը տեղի է ունենալու գյուղատնտեսական և անասնապահական ապրանքների և արտադրանքի ցուցահանդես։ \n' +
-          'Միջոցառման կազմակերպիչ ընկերությունը պատրաստ է անվճար տրամադրել 9 քառ․ մետր ցուցադրական տարածք։ \n' +
-          'Կից ներկայացնում ենք ցուցահանդեսի մասնակցության դիմում-հարցաթերթիկը, ինչպես նաև միջոցառման վերաբերյալ որոշ տեղեկատվական նյութեր։'
-      },
-      {
-        id:2,
-        slides:[
-          {
-            img:news_2_slide_1,
-            data_slide:0
-          },
-          {
-            img:news_2_slide_2,
-            data_slide:1
-          },
-          {
-            img:news_2_slide_3,
-            data_slide:2
-          }
-        ],
-        day:'14-21 ',
-        month:'ՄԱՐՏ',
-        year:'2019',
-        title:'Գյուղատնտեսական և անասնապահական ապրանքների և արտադրանքի ցուցահանդես',
-        img: news_2,
-        text:'Տեղեկացնում ենք, որ Իրաքի Հանրապետության մայրաքաղաք Բաղդադում ս․թ․ մարտի 14-21-ը տեղի է ունենալու գյուղատնտեսական և անասնապահական ապրանքների և արտադրանքի ցուցահանդես։ \n' +
-          'Միջոցառման կազմակերպիչ ընկերությունը պատրաստ է անվճար տրամադրել 9 քառ․ մետր ցուցադրական տարածք։ \n' +
-          'Կից ներկայացնում ենք ցուցահանդեսի մասնակցության դիմում-հարցաթերթիկը, ինչպես նաև միջոցառման վերաբերյալ որոշ տեղեկատվական նյութեր։'
-      },
-      {
-        id:3,
-        slides:[
-          {
-            img:news_3_slide_1,
-            data_slide:0
-          },
-          {
-            img:news_3_slide_2,
-            data_slide:1
-          },
-          {
-            img:news_3_slide_3,
-            data_slide:2
-          }
-        ],
-        day:'14-21 ',
-        month:'ՄԱՐՏ',
-        year:'2019',
-        title:'Գյուղատնտեսական և անասնապահական ապրանքների և արտադրանքի ցուցահանդես',
-        img: news_3,
-        text:'Տեղեկացնում ենք, որ Իրաքի Հանրապետության մայրաքաղաք Բաղդադում ս․թ․ մարտի 14-21-ը տեղի է ունենալու գյուղատնտեսական և անասնապահական ապրանքների և արտադրանքի ցուցահանդես։ \n' +
-          'Միջոցառման կազմակերպիչ ընկերությունը պատրաստ է անվճար տրամադրել 9 քառ․ մետր ցուցադրական տարածք։ \n' +
-          'Կից ներկայացնում ենք ցուցահանդեսի մասնակցության դիմում-հարցաթերթիկը, ինչպես նաև միջոցառման վերաբերյալ որոշ տեղեկատվական նյութեր։'
-      },
-      {
-        id:4,
-        slides:[
-          {
-            img:news_4_slide_1,
-            data_slide:0
-          },
-          {
-            img:news_4_slide_2,
-            data_slide:1
-          },
-          {
-            img:news_4_slide_3,
-            data_slide:2
-          }
-        ],
-        day:'14-21 ',
-        month:'ՄԱՐՏ',
-        year:'2019',
-        title:'Գյուղատնտեսական և անասնապահական ապրանքների և արտադրանքի ցուցահանդես',
-        img: news_4,
-        text:'Տեղեկացնում ենք, որ Իրաքի Հանրապետության մայրաքաղաք Բաղդադում ս․թ․ մարտի 14-21-ը տեղի է ունենալու գյուղատնտեսական և անասնապահական ապրանքների և արտադրանքի ցուցահանդես։ \n' +
-          'Միջոցառման կազմակերպիչ ընկերությունը պատրաստ է անվճար տրամադրել 9 քառ․ մետր ցուցադրական տարածք։ \n' +
-          'Կից ներկայացնում ենք ցուցահանդեսի մասնակցության դիմում-հարցաթերթիկը, ինչպես նաև միջոցառման վերաբերյալ որոշ տեղեկատվական նյութեր։'
-      },
-      {
-        id:5,
-        slides:[
-          {
-            img:news_5_slide_1,
-            data_slide:0
-          },
-          {
-            img:news_5_slide_2,
-            data_slide:1
-          },
-          {
-            img:news_5_slide_3,
-            data_slide:2
-          }
-        ],
-        day:'14-21 ',
-        month:'ՄԱՐՏ',
-        year:'2019',
-        title:'Գյուղատնտեսական և անասնապահական ապրանքների և արտադրանքի ցուցահանդես',
-        img: news_5,
-        text:'Տեղեկացնում ենք, որ Իրաքի Հանրապետության մայրաքաղաք Բաղդադում ս․թ․ մարտի 14-21-ը տեղի է ունենալու գյուղատնտեսական և անասնապահական ապրանքների և արտադրանքի ցուցահանդես։ \n' +
-          'Միջոցառման կազմակերպիչ ընկերությունը պատրաստ է անվճար տրամադրել 9 քառ․ մետր ցուցադրական տարածք։ \n' +
-          'Կից ներկայացնում ենք ցուցահանդեսի մասնակցության դիմում-հարցաթերթիկը, ինչպես նաև միջոցառման վերաբերյալ որոշ տեղեկատվական նյութեր։'
-      },
-      {
-        id:6,
-        slides:[
-          {
-            img:news_6_slide_1,
-            data_slide:0
-          },
-          {
-            img:news_6_slide_2,
-            data_slide:1
-          },
-          {
-            img:news_6_slide_3,
-            data_slide:2
-          }
-        ],
-        day:'14-21 ',
-        month:'ՄԱՐՏ',
-        year:'2019',
-        title:'Գյուղատնտեսական և անասնապահական ապրանքների և արտադրանքի ցուցահանդես',
-        img: news_6,
-        text:'Տեղեկացնում ենք, որ Իրաքի Հանրապետության մայրաքաղաք Բաղդադում ս․թ․ մարտի 14-21-ը տեղի է ունենալու գյուղատնտեսական և անասնապահական ապրանքների և արտադրանքի ցուցահանդես։ \n' +
-          'Միջոցառման կազմակերպիչ ընկերությունը պատրաստ է անվճար տրամադրել 9 քառ․ մետր ցուցադրական տարածք։ \n' +
-          'Կից ներկայացնում ենք ցուցահանդեսի մասնակցության դիմում-հարցաթերթիկը, ինչպես նաև միջոցառման վերաբերյալ որոշ տեղեկատվական նյութեր։'
-      },
-    ]
+  componentDidMount() {
+    this.props.news()
+
   }
 
-
-  componentWillMount(){
-
-    let obj = this.state.news.find(news=>news.id === +this.props.match.params.id)
+  componentWillReceiveProps(nextProps){
+    let obj = nextProps.data.find(news=>news.id === +this.props.match.params.id)
     if(!obj){
       this.props.history.push('/news')
     }
@@ -208,7 +19,7 @@ class NewsDetails extends Component{
     const history_id = this.props.match.params.id;
     const href = `javascript:void(0)`
 
-    const {news} = this.state
+    const news = this.props.data
     let news_item = news.map((news)=>{
 
       return news.id === +history_id && <div className='container' key={news.id}>
@@ -380,4 +191,18 @@ class NewsDetails extends Component{
   }
 }
 
-export default NewsDetails
+const mapStateToProps = (state)=>{
+  console.log(state);
+  return {
+    data: state.news.data
+  }
+}
+
+
+
+const mapDispatchToProps = {
+  news: getNews,
+};
+
+
+export default connect(mapStateToProps,mapDispatchToProps)(NewsDetails)

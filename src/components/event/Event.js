@@ -1,53 +1,17 @@
 import React, { Component } from 'react'
 import './event.css'
-import event1 from '../../assets/images/sagri.jpg'
-import event2 from '../../assets/images/tr1fundraisingappeal.jpg'
-import event3 from '../../assets/images/ciie.jpg'
+import {getEvents} from "../../actions";
+import {connect} from "react-redux/src";
 
 
 
 class Event extends Component{
-  state={
-    events:[
-      {
-        id:1,
-        day:'14-21 ',
-        month:'ՄԱՐՏ',
-        year:'2019',
-        title:'Գյուղատնտեսական և անասնապահական ապրանքների և արտադրանքի ցուցահանդես',
-        img: event1,
-        text:'Տեղեկացնում ենք, որ Իրաքի Հանրապետության մայրաքաղաք Բաղդադում ս․թ․ մարտի 14-21-ը տեղի է ունենալու գյուղատնտեսական և անասնապահական ապրանքների և արտադրանքի ցուցահանդես։ \n' +
-          'Միջոցառման կազմակերպիչ ընկերությունը պատրաստ է անվճար տրամադրել 9 քառ․ մետր ցուցադրական տարածք։ \n' +
-          'Կից ներկայացնում ենք ցուցահանդեսի մասնակցության դիմում-հարցաթերթիկը, ինչպես նաև միջոցառման վերաբերյալ որոշ տեղեկատվական նյութեր։'
-      },
-      {
-        id:2,
-        day:'14-21 ',
-        month:'ՄԱՐՏ',
-        year:'2019',
-        title:'Գյուղատնտեսական և անասնապահական ապրանքների և արտադրանքի ցուցահանդես',
-        img: event2,
-        text:'Տեղեկացնում ենք, որ Իրաքի Հանրապետության մայրաքաղաք Բաղդադում ս․թ․ մարտի 14-21-ը տեղի է ունենալու գյուղատնտեսական և անասնապահական ապրանքների և արտադրանքի ցուցահանդես։ \n' +
-          'Միջոցառման կազմակերպիչ ընկերությունը պատրաստ է անվճար տրամադրել 9 քառ․ մետր ցուցադրական տարածք։ \n' +
-          'Կից ներկայացնում ենք ցուցահանդեսի մասնակցության դիմում-հարցաթերթիկը, ինչպես նաև միջոցառման վերաբերյալ որոշ տեղեկատվական նյութեր։'
-      },
-      {
-        id:3,
-        day:'14-21 ',
-        month:'ՄԱՐՏ',
-        year:'2019',
-        title:'Գյուղատնտեսական և անասնապահական ապրանքների և արտադրանքի ցուցահանդես',
-        img: event3,
-        text:'Տեղեկացնում ենք, որ Իրաքի Հանրապետության մայրաքաղաք Բաղդադում ս․թ․ մարտի 14-21-ը տեղի է ունենալու գյուղատնտեսական և անասնապահական ապրանքների և արտադրանքի ցուցահանդես։ \n' +
-          'Միջոցառման կազմակերպիչ ընկերությունը պատրաստ է անվճար տրամադրել 9 քառ․ մետր ցուցադրական տարածք։ \n' +
-          'Կից ներկայացնում ենք ցուցահանդեսի մասնակցության դիմում-հարցաթերթիկը, ինչպես նաև միջոցառման վերաբերյալ որոշ տեղեկատվական նյութեր։'
-      },
-    ]
+  componentDidMount() {
+    this.props.events()
   }
 
-  componentWillMount(){
-
-    let obj = this.state.events.find(ev=>ev.id === +this.props.match.params.id)
+  componentWillReceiveProps(nextProps) {
+    let obj = nextProps.data.find(ev=>ev.id === +this.props.match.params.id)
     if(!obj){
       this.props.history.push('/events')
     }
@@ -55,17 +19,14 @@ class Event extends Component{
 
   render(){
     const history_id = this.props.match.params.id;
-
-    const {events} = this.state
+    const events = this.props.data
     const href = `javascript:void(0)`
-    let event = events.map((event)=>{
-
+    let event = events && events.map((event)=>{
       return event.id === +history_id && <div className="col-xs-12" key={event.id}>
         <div className="single-ev-content-top">
           <div className="single-img">
             <img src={event.img} className="img-responsive" alt='' />
           </div>
-
           <div className="single-ev-title">
             <div className="single-ev-content-date">
               <p>{event.day}</p>
@@ -80,13 +41,14 @@ class Event extends Component{
 
         <div className="single-ev-content ">
           <p>
-
           </p>
           <p>
             {event.text}
           </p>
           <p>
-            <a href={href}
+            <a href={event.src}
+               target="_blank"
+               rel="noopener noreferrer"
                className="attachmentWrapper">
               <i className="far fa-file-pdf iconPdf"></i>
               Կից տեղեկատվություն
@@ -169,8 +131,8 @@ class Event extends Component{
                                 fillRule="evenodd">
                               </path>
                             </g>
-                          </svg>
-                        </span>
+                  </svg>
+                </span>
               </a>
             </div>
           </div>
@@ -191,4 +153,17 @@ class Event extends Component{
   }
 }
 
-export default Event
+const mapStateToProps = (state)=>{
+  return {
+    data: state.events.data
+  }
+}
+
+
+
+const mapDispatchToProps = {
+  events: getEvents,
+};
+
+
+export default connect(mapStateToProps,mapDispatchToProps)(Event)

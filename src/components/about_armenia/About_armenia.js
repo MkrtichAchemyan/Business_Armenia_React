@@ -1,46 +1,19 @@
 import React, { Component } from 'react'
-import jewelry from '../../assets/images/jewelry-brochure-new.jpg'
+import {connect} from "react-redux/src";
+import {getAboutArmenia} from "../../actions/index"
 
 
 class AboutArmenia extends Component{
-  state={
-    items:[
-      {
-        id:1,
-        category:"JEVELRY",
-        img:jewelry
-      },
-      {
-        id:2,
-        category:"JEVELRY",
-        img:jewelry
-      },
-      {
-        id:3,
-        category:"JEVELRY",
-        img:jewelry
-      },
-      {
-        id:4,
-        category:"JEVELRY",
-        img:jewelry
-      },
-      {
-        id:5,
-        category:"JEVELRY",
-        img:jewelry
-      },
-      {
-        id:6,
-        category:"JEVELRY",
-        img:jewelry
-      }
-    ]
+
+  componentDidMount() {
+      this.props.aboutArmenia()
   }
+
   render(){
-    const {items} = this.state;
-    const href = `javascript:void(0)`
-    const item = items.map(item=>
+    const items = this.props.data;
+    const href = `javascript:void(0)`;
+    const item = items && items.map(item=>
+
       <div className="col-sm-4 team-all-col" style={{marginTop:0}} key={item.id}>
         <div className="event-content" style={{marginTop:0}}>
           <a href={href} className="corporate-style-pdf attachmentWrapper">
@@ -78,4 +51,15 @@ class AboutArmenia extends Component{
   }
 }
 
-export default AboutArmenia
+const mapStateToProps = (state)=>{
+    console.log(state);
+  return {
+    data: state.about_armenia.data
+  }
+}
+
+const mapDispatchToProps = {
+  aboutArmenia: getAboutArmenia,
+};
+
+export default connect(mapStateToProps,mapDispatchToProps)(AboutArmenia)

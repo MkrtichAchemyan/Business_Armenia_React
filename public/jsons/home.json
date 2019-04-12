@@ -1,0 +1,130 @@
+[
+  {
+    "partners":[
+      {
+        "id":"gov",
+        "src":"/images/gov.png"
+      },
+      {
+        "id":"mineconomy",
+        "src":"/images/mineconomy.png"
+      },
+      {
+        "id":"mid",
+        "src":"/images/mid.png"
+      },
+      {
+        "id":"tourism",
+        "src":"/images/tourism.png"
+      },
+      {
+        "id":"atdf",
+        "src":"/images/atdf.png"
+      },
+      {
+        "id":"adb",
+        "src":"/images/adb.png"
+      },
+      {
+        "id":"undp",
+        "src":"/images/undp.png"
+      },
+      {
+        "id":"ada",
+        "src":"/images/ada.png"
+      },
+      {
+        "id":"ifc",
+        "src":"/images/ifc.png"
+      },
+      {
+        "id":"giz",
+        "src":"/images/giz.png"
+      },
+      {
+        "id":"eu",
+        "src":"/images/eu.png"
+      }
+    ],
+    "index_numbers":[
+      {
+        "id":1,
+        "count":35,
+        "statistics":"ՊԱՇՏՈՆԱԿԱՆ ՆԵՐԿԱՅԱՑՈՒՑԻՉՆԵՐ",
+        "title":""
+      },
+      {
+        "id":2,
+        "count":6.789,
+        "statistics":"ԱՐՏԱՀԱՆՄԱՆ ՊԱՅՄԱՆԱԳՐԵՐ",
+        "title":"ՄԼՐԴ․ ԴՐԱՄ"
+      },
+      {
+        "id":3,
+        "count":21.10,
+        "statistics":"ՆԵՐԴՐՈՒՄՆԵՐ",
+        "title":"ՄԼՆ․ ԴՐԱՄ"
+      },
+      {
+        "id":4,
+        "count":22,
+        "statistics":"ԲԻԶՆԵՍԻ ԱՋԱԿՑՄԱՆ ԳՈՐԾԸՆԿԵՐՆԵՐ",
+        "title":""
+      }
+    ],
+    "news":[
+      {
+        "id":1,
+        "img":"/images/img6624.jpg",
+        "day":"13",
+        "month":"Մարտ",
+        "year":"2019",
+        "text":"Հայաստանյան կաշվե արտադրության պոտենցիալը ներկայացված է միջազգային ցուցահանդեսում...",
+        "link":"/news/1"
+      },
+      {
+        "id":2,
+        "img":"/images/aram.jpg",
+        "day":"12",
+        "month":"Մարտ",
+        "year":"2019",
+        "text":"Բուլղարացի գործարարներին են ներկայացվել Հայաստանի ներդրումային հնարավորությունները...",
+        "link":"/news/2"
+      }
+    ],
+    "events":[
+      {
+        "id":1,
+        "img":"/images/439-mosshoes.jpg",
+        "day":"12-15",
+        "month":"Մարտ",
+        "year":"2019",
+        "text":"2019 թ.-ի մարտի 12-15-ին կկայանա «Mos Shoes» միջազգային ցուցահանդեսը...",
+        "link":"/events/1"
+      }
+    ],
+    "slides":[
+      {
+        "id":1,
+        "date":"26 December 2019",
+        "title":"Lorem Ipsum Dolor",
+        "text":"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?",
+        "img":"/images/export.jpg"
+      },
+      {
+        "id":2,
+        "date":"27 December 2019",
+        "title":"Lorem Ipsum Dolor",
+        "text":"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?",
+        "img":"/images/business-support-club.jpg"
+      },
+      {
+        "id":3,
+        "date":"28 December 2019",
+        "title":"Lorem Ipsum Dolor",
+        "text":"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?",
+        "img":"/images/slider-1.jpg"
+      }
+    ]
+  }
+]

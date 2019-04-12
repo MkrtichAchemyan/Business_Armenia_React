@@ -1,39 +1,15 @@
 import React, { Component} from 'react'
-import fb from "../../assets/images/fb.svg";
-import li from "../../assets/images/li.svg";
-import mail from "../../assets/images/mail.svg";
-import tel from "../../assets/images/tel.svg";
-import you from "../../assets/images/you.svg";
+import {getSocialBar} from "../../actions";
+import {connect} from "react-redux/src";
 
 class Social_bar extends Component{
 
-  state={
-    social_items:[
-      {
-        id:"fb-icon",
-        src:fb
-      },
-      {
-        id:"li-icon",
-        src:li
-      },
-      {
-        id:"mail-icon",
-        src:mail
-      },
-      {
-        id:"tel-icon",
-        src:tel
-      },
-      {
-        id:"you-icon",
-        src:you
-      }
-    ],
+  componentDidMount() {
+    this.props.social_bar()
   }
 
   render(){
-    const {social_items} = this.state
+    const social_items = this.props.data
     const href = `javascript:void(0)`
     const social_item = social_items.map(item=>
       <a href={href} key={item.id} target="_blank"  rel="noopener noreferrer">
@@ -52,4 +28,18 @@ class Social_bar extends Component{
   }
 }
 
-export default Social_bar
+const mapStateToProps = (state)=>{
+  console.log(state);
+  return {
+    data: state.social_bar.data
+  }
+}
+
+
+
+const mapDispatchToProps = {
+  social_bar: getSocialBar,
+};
+
+
+export default connect(mapStateToProps,mapDispatchToProps)(Social_bar)

@@ -1,41 +1,14 @@
 import React, { Component } from 'react'
 import map from '../../assets/images/map-footprint.png'
+import {getFootprint} from "../../actions";
+import {connect} from "react-redux/src";
 
 
 class Footprint extends Component{
-  state={
-    items:[
-      {
-        id:1,
-        top:"110.625px",
-        left:"582.188px",
-        link:'/footprint/',
-        name: "Ահարոն Պապոյան",
-        flag:'https://lipis.github.io/flag-icon-css/flags/4x3/ru.svg',
-        country:'ՌՈՒՍԱՍՏԱՆ'
-      },
-      {
-        id:26,
-        top:"278.5px",
-        left:"539.797px",
-        link:'/footprint/',
-        name: "Պետրոս Կարապետյան",
-        flag:'https://lipis.github.io/flag-icon-css/flags/4x3/ae.svg',
-        country:'ԱՄԷ '
-      },
-      {
-        id:3,
-        top:"159.375px",
-        left:"105.688px",
-        link:'/footprint/',
-        name: "Պարույր Սարկիսյան",
-        flag:'https://lipis.github.io/flag-icon-css/flags/4x3/um.svg',
-        country:'ԱՄՆ, Չիկագո'
-      }
-    ]
-  }
+
 
   componentDidMount(){
+    this.props.footprint()
     setTimeout(()=>{
       this.props.location.state && this.props.location.state.scroll && window.scrollTo(0,document.body.scrollHeight*2)
     },0)
@@ -54,12 +27,11 @@ class Footprint extends Component{
   };
 
   render(){
-    const {items} = this.state;
+    const items = this.props.data;
     const href = `javascript:void(0)`
-    const pointer = items.map(item=>
-
+    const pointer = items && items.map(item=>
       <div key={item.id}>
-        <a href={href} onClick={()=>{this.changeUrl(item.link+item.id)}} id={'pointer'+item.id} title=""
+        <a href={href} onClick={()=>{this.changeUrl('/footprint/'+item.id)}} id={'pointer'+item.id} title=""
            className={`map-info-circle map-info-circle${item.id}`}
            onMouseOver={(e)=>{this.mouseOver(e,'tooltip'+item.id)}}
            onMouseOut={(e)=>{this.mouseOut(e,'tooltip'+item.id)}}
@@ -97,11 +69,7 @@ class Footprint extends Component{
             </a>
           </div>
         </div>
-
-
-
       </div>
-
     )
 
     return(
@@ -219,4 +187,18 @@ class Footprint extends Component{
   }
 }
 
-export default Footprint
+const mapStateToProps = (state)=>{
+  console.log(state);
+  return {
+    data: state.footprint.data
+  }
+}
+
+
+
+const mapDispatchToProps = {
+  footprint: getFootprint,
+};
+
+
+export default connect(mapStateToProps,mapDispatchToProps)(Footprint)

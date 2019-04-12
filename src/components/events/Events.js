@@ -1,35 +1,14 @@
 import React, { Component } from 'react'
-import event1 from '../../assets/images/sagri.jpg'
-import event2 from '../../assets/images/tr1fundraisingappeal.jpg'
-import event3 from '../../assets/images/ciie.jpg'
+import {getEvents} from "../../actions";
+import {connect} from "react-redux/src";
 
 
 
 class Events extends Component{
-  state={
-    events:[
-      {
-        id:1,
-        img:event1,
-        date:'14-21 Մարտ 2019',
-        location:'Իրաք',
-        title:'Գյուղատնտեսական և անասնապահական ապրանքների և արտադրանքի ցուցահանդես...'
-      },
-      {
-        id:2,
-        img:event2,
-        date:'12-16 Մարտ 2019',
-        location:'Իրաք',
-        title:'Գյուղատնտեսական և անասնապահական ապրանքների և արտադրանքի ցուցահանդես...'
-      },
-      {
-        id:3,
-        img:event3,
-        date:'10-12 Մարտ 2019',
-        location:'Իրաք',
-        title:'Գյուղատնտեսական և անասնապահական ապրանքների և արտադրանքի ցուցահանդես...'
-      }
-    ]
+
+  componentDidMount() {
+    this.props.events()
+
   }
 
   changeUrl = (url)=>{
@@ -39,8 +18,8 @@ class Events extends Component{
 
   render(){
     const href = `javascript:void(0)`
-    const {events} = this.state;
-    const event = events.map(event=>
+    const events = this.props.data;
+    const event = events && events.map(event=>
       <div data-key={event.id} key={event.id}>
         <div className="col-sm-4">
           <div className="event-content">
@@ -53,7 +32,7 @@ class Events extends Component{
                   <p style={{fontSize: '14px',paddingTop: '6px',marginBottom: 0}}>
                               <span>
                               <i className="fa fa-calendar" aria-hidden="true"></i>
-                              Ամսաթիվ: {event.date}
+                              Ամսաթիվ: {event.day}{event.month}{event.year}
                               </span>
                   </p>
                   <p style={{fontSize: '14px',paddingTop: '6px',marginBottom: 0}}>
@@ -146,4 +125,18 @@ class Events extends Component{
   }
 }
 
-export default Events
+const mapStateToProps = (state)=>{
+  console.log(state);
+  return {
+    data: state.events.data
+  }
+}
+
+
+
+const mapDispatchToProps = {
+  events: getEvents,
+};
+
+
+export default connect(mapStateToProps,mapDispatchToProps)(Events)

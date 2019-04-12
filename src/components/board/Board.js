@@ -1,105 +1,16 @@
 import React, { Component } from 'react'
-import avinyan from '../../assets/images/tigran-avinyan.jpg'
+import {connect} from "react-redux/src";
+import {getBoard} from "../../actions/index"
 
 
 class Board extends Component{
-  state={
-    persons:[
-      {
-        id:1,
-        fullName:"ՏԻԳՐԱՆ ԱՎԻՆՅԱՆ",
-        position:"Հայաստանի Հանրապետության փոխվարչապետ",
-        img:avinyan
-      },
-      {
-        id:2,
-        fullName:"ՏԻԳՐԱՆ ԱՎԻՆՅԱՆ",
-        position:"Հայաստանի Հանրապետության փոխվարչապետ",
-        img:avinyan
-      },
-      {
-        id:3,
-        fullName:"ՏԻԳՐԱՆ ԱՎԻՆՅԱՆ",
-        position:"Հայաստանի Հանրապետության փոխվարչապետ",
-        img:avinyan
-      },
-      {
-        id:4,
-        fullName:"ՏԻԳՐԱՆ ԱՎԻՆՅԱՆ",
-        position:"Հայաստանի Հանրապետության փոխվարչապետ",
-        img:avinyan
-      },
-      {
-        id:5,
-        fullName:"ՏԻԳՐԱՆ ԱՎԻՆՅԱՆ",
-        position:"Հայաստանի Հանրապետության փոխվարչապետ",
-        img:avinyan
-      },
-      {
-        id:6,
-        fullName:"ՏԻԳՐԱՆ ԱՎԻՆՅԱՆ",
-        position:"Հայաստանի Հանրապետության փոխվարչապետ",
-        img:avinyan
-      },
-      {
-        id:7,
-        fullName:"ՏԻԳՐԱՆ ԱՎԻՆՅԱՆ",
-        position:"Հայաստանի Հանրապետության փոխվարչապետ",
-        img:avinyan
-      },
-      {
-        id:8,
-        fullName:"ՏԻԳՐԱՆ ԱՎԻՆՅԱՆ",
-        position:"Հայաստանի Հանրապետության փոխվարչապետ",
-        img:avinyan
-      },
-      {
-        id:9,
-        fullName:"ՏԻԳՐԱՆ ԱՎԻՆՅԱՆ",
-        position:"Հայաստանի Հանրապետության փոխվարչապետ",
-        img:avinyan
-      },
-      {
-        id:10,
-        fullName:"ՏԻԳՐԱՆ ԱՎԻՆՅԱՆ",
-        position:"Հայաստանի Հանրապետության փոխվարչապետ",
-        img:avinyan
-      },
-      {
-        id:11,
-        fullName:"ՏԻԳՐԱՆ ԱՎԻՆՅԱՆ",
-        position:"Հայաստանի Հանրապետության փոխվարչապետ",
-        img:avinyan
-      },
-      {
-        id:12,
-        fullName:"ՏԻԳՐԱՆ ԱՎԻՆՅԱՆ",
-        position:"Հայաստանի Հանրապետության փոխվարչապետ",
-        img:avinyan
-      },
-      {
-        id:13,
-        fullName:"ՏԻԳՐԱՆ ԱՎԻՆՅԱՆ",
-        position:"Հայաստանի Հանրապետության փոխվարչապետ",
-        img:avinyan
-      },
-      {
-        id:14,
-        fullName:"ՏԻԳՐԱՆ ԱՎԻՆՅԱՆ",
-        position:"Հայաստանի Հանրապետության փոխվարչապետ",
-        img:avinyan
-      },
-      {
-        id:15,
-        fullName:"ՏԻԳՐԱՆ ԱՎԻՆՅԱՆ",
-        position:"Հայաստանի Հանրապետության փոխվարչապետ",
-        img:avinyan
-      },
-    ]
+  componentDidMount() {
+    this.props.board()
+
   }
   render(){
-    const {persons} = this.state;
-    const person = persons.map(person=>
+    const persons = this.props.data;
+    const person = persons && persons.map(person=>
       <div className="col-sm-4 team-all-col" key={person.id}>
         <div className="team-all">
           <div className="team-all-img">
@@ -157,4 +68,16 @@ class Board extends Component{
   }
 }
 
-export default Board
+const mapStateToProps = (state)=>{
+  console.log(state);
+  return {
+    data: state.board.data
+  }
+}
+
+const mapDispatchToProps = {
+  board: getBoard,
+};
+
+
+export default connect(mapStateToProps,mapDispatchToProps)(Board)

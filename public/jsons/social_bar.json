@@ -1,0 +1,22 @@
+[
+  {
+    "id":"fb-icon",
+    "src":"/images/fb.svg"
+  },
+  {
+    "id":"li-icon",
+    "src":"/images/li.svg"
+  },
+  {
+    "id":"mail-icon",
+    "src":"/images/mail.svg"
+  },
+  {
+    "id":"tel-icon",
+    "src":"/images/tel.svg"
+  },
+  {
+    "id":"you-icon",
+    "src":"/images/you.svg"
+  }
+]

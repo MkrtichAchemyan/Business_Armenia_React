@@ -1,50 +1,19 @@
 import React, { Component } from 'react'
-import pdf from '../../assets/pdf/Insider_Trading.pdf'
+import {getCorporate} from "../../actions";
+import {connect} from "react-redux/src";
 
 
 class Corporate extends Component{
-  state={
-    items:[
-      {
-        id:1,
-        date:"16.03.2018",
-        title:"ԻՆՍԱՅԴԵՐԱԿԱՆ ՔԱՂԱՔԱԿԱՆՈՒԹՅՈՒՆ",
-        size:'7.9 Մբ',
-        src: pdf
-      },
-      {
-        id:2,
-        date:"16.03.2018",
-        title:"ԻՆՍԱՅԴԵՐԱԿԱՆ ՔԱՂԱՔԱԿԱՆՈՒԹՅՈՒՆ",
-        size:'7.9 Մբ',
-        src: pdf
-      },
-      {
-        id:3,
-        date:"16.03.2018",
-        title:"ԻՆՍԱՅԴԵՐԱԿԱՆ ՔԱՂԱՔԱԿԱՆՈՒԹՅՈՒՆ",
-        size:'7.9 Մբ',
-        src: pdf
-      },
-      {
-        id:4,
-        date:"16.03.2018",
-        title:"ԻՆՍԱՅԴԵՐԱԿԱՆ ՔԱՂԱՔԱԿԱՆՈՒԹՅՈՒՆ",
-        size:'7.9 Մբ',
-        src: pdf
-      },
-      {
-        id:5,
-        date:"16.03.2018",
-        title:"ԻՆՍԱՅԴԵՐԱԿԱՆ ՔԱՂԱՔԱԿԱՆՈՒԹՅՈՒՆ",
-        size:'7.9 Մբ',
-        src: pdf
-      },
-    ]
+
+
+  componentDidMount() {
+    this.props.corporate()
+
   }
+
   render(){
-    const {items} = this.state;
-    const item = items.map(item=>
+    const items = this.props.data;
+    const item = items && items.map(item=>
       <div className="row corporate-info-row" key={item.id}>
         <div className="col-md-11 corporate-text-all">
           <div className="corporate-info">
@@ -94,4 +63,16 @@ class Corporate extends Component{
   }
 }
 
-export default Corporate
+const mapStateToProps = (state)=>{
+  console.log(state);
+  return {
+    data: state.corporate.data
+  }
+}
+
+const mapDispatchToProps = {
+  corporate: getCorporate,
+};
+
+
+export default connect(mapStateToProps,mapDispatchToProps)(Corporate)

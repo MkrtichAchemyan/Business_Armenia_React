@@ -1,0 +1,32 @@
+[
+  {
+    "id":1,
+    "category":"JEVELRY",
+    "img":"./images/jewelry-brochure-new.jpg"
+  },
+  {
+    "id":2,
+    "category":"JEVELRY",
+    "img":"./images/jewelry-brochure-new.jpg"
+  },
+  {
+    "id":3,
+    "category":"JEVELRY",
+    "img":"./images/jewelry-brochure-new.jpg"
+  },
+  {
+    "id":4,
+    "category":"JEVELRY",
+    "img":"./images/jewelry-brochure-new.jpg"
+  },
+  {
+    "id":5,
+    "category":"JEVELRY",
+    "img":"./images/jewelry-brochure-new.jpg"
+  },
+  {
+    "id":6,
+    "category":"JEVELRY",
+    "img":"./images/jewelry-brochure-new.jpg"
+  }
+]

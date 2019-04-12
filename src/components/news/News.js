@@ -1,71 +1,15 @@
 import React, { Component } from 'react'
-import news_1 from "../../assets/images/img6624.jpg";
-import news_2 from "../../assets/images/aram.jpg";
-import news_3 from "../../assets/images/chicago.jpg";
-import news_4 from "../../assets/images/img6440.jpg";
-import news_5 from "../../assets/images/amore.jpg";
-import news_6 from "../../assets/images/kwop8883.jpg";
-
 import slide from "../../assets/images/img2600.jpg"
+import {getNews} from "../../actions";
+import {connect} from "react-redux/src";
 
 
 
 class News extends Component{
-  state={
-    news:[
-      {
-        id:1,
-        img:news_1,
-        day:'13',
-        month:'Մարտ',
-        year:'2019',
-        text:'Հայաստանյան կաշվե արտադրության պոտենցիալը ներկայացված է միջազգային ցուցահանդեսում...'
-      },
-      {
-        id:2,
-        img:news_2,
-        day:'12',
-        month:'Մարտ',
-        year:'2019',
-        text:'Բուլղարացի գործարարներին են ներկայացվել Հայաստանի ներդրումային հնարավորությունները...'
-      }
-      ,
-      {
-        id:3,
-        img:news_3,
-        day:'12',
-        month:'Մարտ',
-        year:'2019',
-        text:'Բուլղարացի գործարարներին են ներկայացվել Հայաստանի ներդրումային հնարավորությունները...'
-      }
-      ,
-      {
-        id:4,
-        img:news_4,
-        day:'12',
-        month:'Մարտ',
-        year:'2019',
-        text:'Բուլղարացի գործարարներին են ներկայացվել Հայաստանի ներդրումային հնարավորությունները...'
-      }
-      ,
-      {
-        id:5,
-        img:news_5,
-        day:'12',
-        month:'Մարտ',
-        year:'2019',
-        text:'Բուլղարացի գործարարներին են ներկայացվել Հայաստանի ներդրումային հնարավորությունները...'
-      }
-      ,
-      {
-        id:6,
-        img:news_6,
-        day:'12',
-        month:'Մարտ',
-        year:'2019',
-        text:'Բուլղարացի գործարարներին են ներկայացվել Հայաստանի ներդրումային հնարավորությունները...'
-      }
-    ],
+
+  componentDidMount() {
+    this.props.news()
+
   }
 
   changeUrl = (url)=>{
@@ -75,7 +19,7 @@ class News extends Component{
 
   render(){
     const href = `javascript:void(0)`
-    const {news} = this.state;
+    const news = this.props.data;
     const news_i = news.map(news=>
       <div data-key={news.id} key={news.id}>
         <div className="col-sm-4">
@@ -88,7 +32,7 @@ class News extends Component{
                 </div>
                 <div className="home-news-content-text">
                   <h3 className="home-news-content-text-h3">
-                    {news.text}
+                    {news.title}
                   </h3>
                 </div>
 
@@ -160,4 +104,18 @@ class News extends Component{
   }
 }
 
-export default News
+const mapStateToProps = (state)=>{
+  console.log(state);
+  return {
+    data: state.news.data
+  }
+}
+
+
+
+const mapDispatchToProps = {
+  news: getNews,
+};
+
+
+export default connect(mapStateToProps,mapDispatchToProps)(News)

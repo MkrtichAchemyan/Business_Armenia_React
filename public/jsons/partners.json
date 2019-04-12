@@ -1,0 +1,120 @@
+[
+  {
+    "armenian_partners":[
+      {
+        "id":"gov",
+        "src": "/images/partners/gov.png"
+      },
+      {
+        "id":"min",
+        "src": "/images/partners/mineconomy.png"
+      },
+      {
+        "id":"mid",
+        "src": "/images/partners/mid.png"
+      },
+      {
+        "id":"travel",
+        "src": "/images/partners/tourism.png"
+      },
+      {
+        "id":"atdf",
+        "src": "/images/partners/atdf.png"
+      },
+      {
+        "id":"vine_wine",
+        "src": "/images/partners/vine-wine.png"
+      },
+      {
+        "id":"cilicia",
+        "src": "/images/partners/cilicia.png"
+      },
+      {
+        "id":"goarmenian_caritasv",
+        "src": "/images/partners/armenian-caritas.png"
+      },
+      {
+        "id":"rip",
+        "src": "/images/partners/artsakh-investment-fund.png"
+      },
+      {
+        "id":"invest_club",
+        "src": "/images/partners/investors-club-of-armenia.png"
+      },
+      {
+        "id":"repat_armenia",
+        "src": "/images/partners/repat-armenia.png"
+      },
+      {
+        "id":"yenokavan",
+        "src": "/images/partners/yenokavan-development-foundation.png"
+      },
+      {
+        "id":"sau",
+        "src": "/images/partners/sau.png"
+      },
+      {
+        "id":"cmyk",
+        "src": "/images/partners/cmyk.png"
+      }
+    ],
+    "international_partners":[
+      {
+        "id":"adb",
+        "src": "/images/partners/adb.png"
+      },
+      {
+        "id":"undp",
+        "src": "/images/partners/undp.png"
+      },
+      {
+        "id":"ada",
+        "src": "/images/partners/ada.png"
+      },
+      {
+        "id":"ifc",
+        "src": "/images/partners/ifc.png"
+      },
+      {
+        "id":"giz",
+        "src": "/images/partners/giz.png"
+      },
+      {
+        "id":"eu",
+        "src": "/images/partners/eu.png"
+      },
+      {
+        "id":"itc",
+        "src": "/images/partners/itc.png"
+      },
+      {
+        "id":"wbg",
+        "src": "/images/partners/wbg.png"
+      },
+      {
+        "id":"rdcl_world",
+        "src": "/images/partners/rdcl-world.png"
+      },
+      {
+        "id":"ali",
+        "src": "/images/partners/association-of-lebanese-industrialists.png"
+      },
+      {
+        "id":"bta",
+        "src": "/images/partners/bta.png"
+      },
+      {
+        "id":"cii",
+        "src": "/images/partners/confederation-of-indian-industry.png"
+      },
+      {
+        "id":"dcib",
+        "src": "/images/partners/dutch-council-for-international-business.png"
+      },
+      {
+        "id":"cci_feed",
+        "src": "/images/partners/f-of-lebanon.png"
+      }
+    ]
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "id":1,
+    "top":"110.625px",
+    "left":"582.188px",
+    "name": "Ահարոն Պապոյան",
+    "flag":"https://lipis.github.io/flag-icon-css/flags/4x3/ru.svg",
+    "country":"ՌՈՒՍԱՍՏԱՆ",
+    "map":"/images/russiaLow.svg",
+    "email":"aharon.papoyan@businessarmenia.am",
+    "text":"Ահարոն Պապոյանը Investment Banking-ի հաջողակ մասնագետ է, «ATON» ընկերության բաժնետեր, կորպորատիվ ֆինանսների վարչության ղեկավար։ Հայաստանում ներդրումային ծրագրերի մեծ փորձ ունի։",
+    "img": "/images/aharon-papoyan.jpg"
+  },
+  {
+    "id":26,
+    "top":"278.5px",
+    "left":"539.797px",
+    "name": "Պետրոս Կարապետյան",
+    "flag":"https://lipis.github.io/flag-icon-css/flags/4x3/ae.svg",
+    "country":"ԱՄԷ ",
+    "map":"/images/unitedArabEmiratesLow.svg",
+    "email":"petros.karapetyan@businessarmenia.am",
+    "text":"Պետրոս Կարապետյանը «Zilli» ՍՊԸ-ի հիմնադիրն է, Հայաստանում ԱՄՆ դեսպանատան և Ֆիլիպինների պատվավոր հյուպատոսության նախկին աշխատակիցը։Պետրոս Կարապետյանը ներկայումս հանդիսանում է AM-SPT FZ ընկերության գլխավոր մենեջերը: Նախկինում աշխատել է Հայաստանում ԱՄՆ դեսպանատանը և Ֆիլիպինների պատվավոր հյուպատոսությունում:",
+    "img": "/images/petros-karapetyan.jpg"
+  },
+  {
+    "id":3,
+    "top":"159.375px",
+    "left":"105.688px",
+    "name": "Պարույր Սարկիսյան",
+    "flag":"https://lipis.github.io/flag-icon-css/flags/4x3/um.svg",
+    "country":"ԱՄՆ, Չիկագո",
+    "map":"/images/usaLow.svg",
+    "email":"paruir.sarkisian@businessarmenia.am",
+    "text":"Պարույր Սարկիսյանը Հայաստանում, Ռուսաստանում և Բուլղարիայում բիզնես հաղորդակցության ոլորտում երկար տարիների փորձ ունի։ Նա նաև Երևան-Չիկագո քույր քաղաքների նախաձեռնող խմբի համանախագահն է։Պարույր Սարկիսյանն ունի երկար տարիների աշխատանքային փորձ Հայաստանում, Ռուսաստանում և Բուլղարիայում բիզնես հաղորդակցության ոլորտում։ Նա նաև Երևան-Չիկագո քույր քաղաքների նախաձեռնող խմբի համանախագահն է։",
+    "img": "/images/paruyr-sarkisyan.jpg"
+  }
+]
