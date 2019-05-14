@@ -151,7 +151,6 @@ class Header extends Component{
 }
 
 const mapStateToProps = (state)=>{
-  console.log(state);
   return {
     data: state.header.data
   }

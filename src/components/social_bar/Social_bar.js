@@ -29,7 +29,6 @@ class Social_bar extends Component{
 }
 
 const mapStateToProps = (state)=>{
-  console.log(state);
   return {
     data: state.social_bar.data
   }
